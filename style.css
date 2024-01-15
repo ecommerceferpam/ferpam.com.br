@@ -38,72 +38,11 @@ main{
 
 
 .section-produtos-1{
-    padding: 20px;
     flex-direction: column;
     align-items: center;
     gap: 25px;
     margin: 40px;
-    overflow: hidden;
-}
-.galeria_de_produtos{
-    width: 1280px;
-    display: flex;
-    overflow: hidden;
-    gap: 10px;
-    
-}
-
-.card_produto{
-    width: 300px;
-    background-color: #ffffff;
-    border-radius: 8px;
-    overflow: hidden;
-    cursor: pointer;
-    padding: 0px 15px 15px 15px;
-}
-.frete0{
-    min-height: 30px;
-}
-.frete1{
-    background-color: #009600;
-    min-height: 30px;
-    color: #fff;
-    font-weight: bold;
-    font-size: 12px;
-    letter-spacing: 1px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-}
-.imagem_produto img{
-    width: 100%;
-}
-.desc_produto{
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-.titulo_produto{
-    font-size: 14px;
-    font-weight: bold;
-    min-height: 60px;
-}
-.preco_desconto{
-    font-size: 30px;
-    font-weight: bold;
-    line-height: 30px;
-    color: #040b3f;
-
-}
-.preco1 span{
-    font-size: 14px;
-    color: #00971c;
-}
-.preco2{
-    display: flex;
-    font-size: 14px;
+    /* overflow: hidden; */
 }
 
 
