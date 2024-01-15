@@ -17,10 +17,10 @@
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.23);
 }
 .galeria_de_produtos i:first-child{
-    left: -22px;
+    left: -18px;
 }
 .galeria_de_produtos i:last-child{
-    right: -22px;
+    right: -18px;
 }
 
 .galeria_de_produtos .galeria{
@@ -146,6 +146,11 @@
     .galeria_de_produtos .galeria{
         grid-auto-columns: calc((100%/3) - 14px);
     }
+    .galeria_de_produtos i{
+        display: none;
+    }
+
+
 }
 @media screen and (max-width: 850px){
     .galeria_de_produtos .galeria{
