@@ -55,6 +55,12 @@ header{
     color: #293065;
     font-size: 20px;
 }
+#desktop-search{
+    display: block;
+}
+#mobile-search{
+    display: none;
+}
 .user-icons{
     color: #fff;
     display: flex;
@@ -133,4 +139,18 @@ header{
         display: none;
     }
     
+}
+@media screen and (max-width: 600px) {
+    #desktop-search{
+        display: none;
+    }
+    #mobile-search{
+        display: block;
+    }
+    .logo{
+        display: none;
+    }
+    .faixa-topo{
+        display: none;
+    }
 }
