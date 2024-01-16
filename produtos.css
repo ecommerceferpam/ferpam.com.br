@@ -159,6 +159,6 @@
 }
 @media screen and (max-width: 500px){
     .galeria_de_produtos .galeria{
-        grid-auto-columns: calc((100%/1) - 20px);
+        grid-auto-columns: calc((100%/1) - 150px);
     }
 }
