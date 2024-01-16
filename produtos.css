@@ -157,7 +157,7 @@
         grid-auto-columns: calc((100%/2) - 14px);
     }
 }
-@media screen and (max-width: 600px){
+@media screen and (max-width: 500px){
     .galeria_de_produtos .galeria{
         grid-auto-columns: calc((100%/1) - 20px);
     }
