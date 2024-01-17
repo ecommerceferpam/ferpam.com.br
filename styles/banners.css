@@ -1,0 +1,108 @@
+.banner-container{
+    position: relative;
+    /* width: 800px; */
+    width: 100vw;
+    max-width: 1280px;
+    padding: 20px;
+    height: 350px;
+    border-radius: 8px;
+}
+.banner-container .banners{
+    width: 100%;
+    /* height: calc(100% - 40px); */
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+}
+.banner-container .banners img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    object-fit: cover;
+}
+.banner-container .banners img:not(.active){
+    top: 0;
+    left: -100%;
+}
+span.next,  span.prev{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 14px;
+    font-size: 40px;
+    font-weight: bold;
+    transition: .5s;
+    border-radius: 3px;
+    user-select: none;
+    cursor: pointer;
+    z-index: 1;
+    color: #fff;
+}
+span.next{
+    right: 20px;
+}
+span.prev{
+    left: 20px;
+}
+span.next:hover,  span.prev:hover{
+    opacity: .8;
+    background-color: black;
+}
+
+
+
+.dots{
+    position: absolute;
+    border: 5px;
+    transform: translateX(-50%);
+    bottom: 30px;
+    z-index: 3;
+    left: 50%;
+}
+.dots .dot{
+    width: 15px;
+    height: 15px;
+    margin: 0px 2px;
+    border: 3px solid #fff;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+.dots .active{
+    background-color: #fff;
+}
+
+@keyframes next1{
+    from{
+        left: 0%
+    }
+    to{
+        left: -100%;
+    }
+}
+@keyframes next2{
+    from{
+        left: 100%
+    }
+    to{
+        left: 0%;
+    }
+}
+
+@keyframes prev1{
+    from{
+        left: 0%
+    }
+    to{
+        left: 100%;
+    }
+}
+@keyframes prev2{
+    from{
+        left: -100%
+    }
+    to{
+        left: 0%;
+    }
+}
