@@ -26,7 +26,6 @@
 header{
     background-color: #293065;
     width: 100%;
-    position: sticky;
 }
 .header-content{
     display: flex;
