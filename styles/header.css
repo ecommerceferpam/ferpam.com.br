@@ -26,6 +26,9 @@
 header{
     background-color: #293065;
     width: 100%;
+    position: sticky;
+    top: -1px;
+    z-index: 99;
 }
 .header-content{
     display: flex;
@@ -35,10 +38,10 @@ header{
     padding: 15px 20px;
 }
 .logo{
-    height: 50px;
+    height: 45px;
 }
 .barra-de-pesquisa{
-    height: 50px;
+    height: 45px;
     display: flex;
     justify-content: space-between;
     align-items: center;
