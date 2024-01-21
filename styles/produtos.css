@@ -87,16 +87,17 @@
 
 .frete0{
     min-height: 30px;
+    display: none;
 }
 .frete1{
     width: 100%;
-    /* background-color: #009600; */
+    background-color: #009600;
     min-height: 30px;
     color: #fff;
     font-weight: bold;
     font-size: 12px;
     letter-spacing: 1px;
-    display: flex;
+    display: none;
     flex-direction: row;
     justify-content: center;
     align-items: center;
@@ -104,7 +105,8 @@
     border-radius: 8px 8px 0px 0px;
 }
 .conteudo_card{
-    padding: 0px 15px 15px 15px;
+    padding: 20px 15px 15px 15px;
+    color: #2c2c2c;
 }
 .desc_produto{
     display: flex;
@@ -113,14 +115,22 @@
 }
 .titulo_produto{
     font-size: 14px;
+    /* font-weight: 600; */
     font-weight: bold;
     min-height: 60px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+    letter-spacing: .4px;
 }
 .preco_desconto{
-    font-size: 30px;
+    /* font-size: 30px; */
+    font-size: 26px;
     font-weight: bold;
-    line-height: 30px;
-    color: #040b3f;
+    line-height: 26px;
+    /* color: #040b3f; */
+    color: #293065;
 
 }
 .preco1 span{
@@ -129,7 +139,7 @@
 }
 .preco2{
     display: flex;
-    font-size: 14px;
+    font-size: 12px;
 }
 
 
@@ -152,23 +162,28 @@
 
 
 }
-@media screen and (max-width: 850px){
+@media screen and (max-width: 730px){
     .galeria_de_produtos .galeria{
         grid-auto-columns: calc((100%/2) - 80px);
     }
 }
-@media screen and (max-width: 590px){
+@media screen and (max-width: 600px){
     .galeria_de_produtos .galeria{
-        grid-auto-columns: calc((100%/1) - 150px);
+        grid-auto-columns: calc((100%/2) - 50px);
     }
 }
-@media screen and (max-width: 450px){
+@media screen and (max-width: 520px){
+    .galeria_de_produtos .galeria{
+        grid-auto-columns: calc((100%/2) - 20px);
+    }
+}
+@media screen and (max-width: 430px){
     .galeria_de_produtos .galeria{
         grid-auto-columns: calc((100%/1) - 100px);
     }
 }
-@media screen and (max-width: 370px){
+@media screen and (max-width: 330px) {
     .galeria_de_produtos .galeria{
-        grid-auto-columns: calc((100%/1) - 60px);
+        grid-auto-columns: calc((100%/1) - 50px);
     }
 }
