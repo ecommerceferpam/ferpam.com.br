@@ -40,37 +40,6 @@ main{
     margin-bottom: 40px;
     padding: 0;
 }
-.banner{
-    max-width: 100%;
-}
-.frete-1{
-    max-width: 100%;
-}
-
-
-
-.sessao-produtos{
-    flex-direction: column;
-    align-items: start;
-    gap: 20px;
-    /* overflow: hidden; */
-}
-
-.sessao-marcas{
-    overflow: hidden;
-    padding: 40px 20px;
-}
-.marcas{
-    display: flex;
-    gap: 10px;
-}
-.marcas img{
-    height: 50px;
-    background-color: #fff;
-    border-radius: 8px;
-}
-
-
 
 
 
