@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="./styles/header.css">
     <link rel="stylesheet" href="./styles/footer.css">
     <link rel="stylesheet" href="./styles/banners.css">
+    <link rel="stylesheet" href="./styles/vantagens.css">
     <link rel="stylesheet" href="./styles/produtos.css">
     <link rel="stylesheet" href="./styles/marcas.css">
     <link rel="stylesheet" href="./styles/blog_card.css">
@@ -31,7 +32,8 @@
 <body>
     <!-- Header -->
     <div class="faixa-topo">
-        <p>FRETE GRÁTIS PARA TODO O <span id="br">BR</span><span id="as">AS</span><span id="il">IL</span>! - <a href="">Veja as Regras</a></p>
+        <!-- <p>FRETE GRÁTIS PARA TODO O <span id="br">BR</span><span id="as">AS</span><span id="il">IL</span>! - <a href="">Veja as Regras</a></p> -->
+        <p>EM NOSSO SITE TEMOS MAIS DE 28 MIL PRODUTOS E CONTINUAMOS CADASTRANDO DIARIAMENTE EM NOSSO SITE PARA ATENDER VOCÊ</p>
     </div>
     <header class="page-container">
         <div class="page-size header-content">
@@ -201,6 +203,94 @@
                 }
             </script>
             <!-- Fim Banners -->
+
+
+            
+            <div class="vantagens-container">
+                <div class="page-size">
+                    <div class="vantagens">
+                        <div class="vantagem active">
+                            <i class="bi bi-patch-check"></i> GANHE 5% DE DESCONTO À VISTA
+                        </div>
+                        <div class="vantagem">
+                            <i class="bi bi-coin"></i> PAGUE EM ATÉ 10X SEM JUROS
+                        </div>
+                        <div class="vantagem">
+                            <i class="bi bi-shop"></i> COMPRE NO SITE E RETIRE NA LOJA
+                        </div>
+                    </div>
+
+                    <div class="dotsVantagens">
+                        <div class="dotVantagem active" attr='0'onclick="switchVantagem(this)"></div>
+                        <div class="dotVantagem" attr='1'onclick="switchVantagem(this)"></div>
+                        <div class="dotVantagem" attr='2'onclick="switchVantagem(this)"></div>
+                    </div>
+                </div>
+            </div>
+
+            <script type="text/javascript">
+
+                let vantagens = document.querySelectorAll('.vantagem');
+                let dotsVantagens = document.querySelectorAll('.dotVantagem');
+                var contadorVantagens = 0;
+    
+                // Code for next button
+                function slideNextVantagens(){
+                    vantagens[contadorVantagens].style.animation = 'next1 0.5s ease-in forwards';
+                    if(contadorVantagens >= vantagens.length-1){
+                        contadorVantagens = 0;
+                    }
+                    else{
+                        contadorVantagens++;
+                    }
+                    clearInterval(deletIntervalVantagens);
+                    autoSlidingVantagens();
+
+                    vantagens[contadorVantagens].style.animation = 'next2 0.5s ease-in forwards';
+                    indicatorsVantagens();
+                }
+
+    
+                // Auto slideing
+                function autoSlidingVantagens(){
+                    deletIntervalVantagens = setInterval(timer, 6000);
+                    function timer(){
+                        slideNextVantagens();
+                        indicatorsVantagens();
+                    }
+                }
+                autoSlidingVantagens();
+    
+                // Stop auto sliding when mouse is over
+                const containerVantagens = document.querySelector('.vantagens-container');
+                containerVantagens.addEventListener('mouseover', function(){
+                    clearInterval(deletIntervalVantagens);
+                });
+    
+                // Resume sliding when mouse is out
+                containerVantagens.addEventListener('mouseout', autoSlidingVantagens);
+    
+                // Add and remove active class from the indicatorsVantagens
+                function indicatorsVantagens(){
+                    for(i = 0; i < dotsVantagens.length; i++){
+                        dotsVantagens[i].className = dotsVantagens[i].className.replace(' active', '');
+                    }
+                    dotsVantagens[contadorVantagens].className += ' active';
+                }
+    
+                // Add click event to the indicator
+                function switchVantagem(currentVantagem){
+                    currentVantagem.classList.add('active');
+                    var imageId = currentVantagem.getAttribute('attr');
+                    if(imageId > contadorVantagens){
+                        vantagens[contadorVantagens].style.animation = 'next1 0.5s ease-in forwards';
+                        contadorVantagens = imageId;
+                        vantagens[contadorVantagens].style.animation = 'next2 0.5s ease-in forwards';
+                    }
+                    indicatorsVantagens();
+                }
+            </script>
+
 
         <div class="main-content page-size">
     
@@ -1225,7 +1315,7 @@
                     <i class="bi bi-cart-fill"></i>
                     <p>Carrinho</p>
                 </li>
-                <li>
+                <li id="mobile-wpp-btn">
                     <i class="bi bi-whatsapp"></i>
                     <p>Whatsapp</p>
                 </li>

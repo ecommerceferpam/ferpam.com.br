@@ -125,10 +125,10 @@
     font-size: 14px;
     /* font-weight: 600; */
     font-weight: bold;
-    min-height: 60px;
+    /* min-height: 60px; */
     display: -webkit-box;
     -webkit-box-orient: vertical;
-    -webkit-line-clamp: 3;
+    -webkit-line-clamp: 2;
     overflow: hidden;
     letter-spacing: .4px;
 }

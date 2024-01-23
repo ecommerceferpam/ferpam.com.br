@@ -1,0 +1,54 @@
+
+.vantagens-container{
+    width: 100%;
+    height: 30px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    background-color: #161a36;
+    /* padding: 5px 20px; */
+}
+.vantagens-container .page-size{
+    width: 100%;
+    /* max-width: 100%; */
+    /* height: calc(100% - 40px); */
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+.vantagens-container .page-size .vantagem{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    object-fit: cover;
+    color: rgb(17, 206, 0);
+    font-weight: bold;
+    letter-spacing: .5px;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+}
+.vantagens-container .page-size .vantagem:not(.active){
+    top: 0;
+    left: -100%;
+}
+.vantagens-container .vantagens .vantagem i{
+    font-size: 18px;
+    color: #fff;
+}
+
+@media screen and (max-width: 900px){
+    .vantagens-container{
+        height: 25px;
+    }
+    .vantagens-container .page-size .vantagem{
+        font-size: 11px;
+    }
+    .vantagens-container .vantagens .vantagem i{
+        font-size: 15px;
+        color: #fff;
+    }
+}
