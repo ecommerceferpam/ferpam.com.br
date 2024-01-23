@@ -36,7 +36,7 @@ i.next,  i.prev{
     user-select: none;
     cursor: pointer;
     z-index: 1;
-    background-color: #ffffff54;
+    background-color: #ffffff0a;
 }
 i.next{
     right: 20px;
