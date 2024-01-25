@@ -5,8 +5,9 @@
     position: relative;
     display: flex;
     justify-content: center;
-    background-color: #161a36;
     /* padding: 5px 20px; */
+    background-color: #161a36;
+    max-width: 1920px;
 }
 .vantagens-container .page-size{
     width: 100%;
@@ -15,6 +16,7 @@
     height: 100%;
     position: relative;
     overflow: hidden;
+    background-color: #161a36;
 }
 .vantagens-container .page-size .vantagem{
     width: 100%;
@@ -29,7 +31,7 @@
     align-items: center;
     justify-content: center;
     gap: 10px;
-
+    left: 0;
 }
 .vantagens-container .page-size .vantagem:not(.active){
     top: 0;
@@ -43,12 +45,17 @@
 @media screen and (max-width: 900px){
     .vantagens-container{
         height: 25px;
+        background: none;
+    }
+    .vantagens-container .page-size{
+        margin: 0px 20px;
+        border-radius: 0px 0px 8px 8px;
     }
     .vantagens-container .page-size .vantagem{
-        font-size: 11px;
+        font-size: 10px;
     }
     .vantagens-container .vantagens .vantagem i{
-        font-size: 15px;
+        font-size: 14px;
         color: #fff;
     }
 }
