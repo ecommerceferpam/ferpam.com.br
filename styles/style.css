@@ -18,12 +18,16 @@ body{
 }
 .page-size{
     width: 100%;
-    max-width: 1200px;
+    max-width: 1280px;
     padding-left: 20px;
     padding-right: 20px;
 }
 .bold{
     font-weight: bold;
+}
+h1{
+    color: #292929;
+    font-size: 1.5em;
 }
 
 
@@ -35,9 +39,9 @@ main{
 .main-content{
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: 50px;
     margin-top: 20px;
-    margin-bottom: 40px;
+    margin-bottom: 50px;
     padding: 0;
 }
 

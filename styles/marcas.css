@@ -1,6 +1,7 @@
-/* .sessao-marcas{
-    overflow: hidden;
-} */
+.sessao-marcas{
+    flex-direction: column;
+    gap: 10px;
+}
 
 .marcas{
     width: 100%;
@@ -8,14 +9,16 @@
 }
 
 #galeria_marcas i{
+    height: 40px;
+    width: 40px;
     background-color: rgba(255, 255, 255, 0);
     box-shadow: 0 0px 0px rgba(255, 255, 255, 0);
 }
 #galeria_marcas i:first-child{
-    left: -15px;
+    left: -25px;
 }
 #galeria_marcas i:last-child{
-    right: -15px;
+    right: -25px;
 }
 
 #galeria_marcas .galeria{
@@ -43,7 +46,6 @@
     width: fit-content;
     height: 100%;
 }
-
 
 
 
