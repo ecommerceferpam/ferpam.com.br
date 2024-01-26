@@ -15,10 +15,10 @@
     box-shadow: 0 0px 0px rgba(255, 255, 255, 0);
 }
 #galeria_marcas i:first-child{
-    left: -25px;
+    left: -6px;
 }
 #galeria_marcas i:last-child{
-    right: -25px;
+    right: -6px;
 }
 
 #galeria_marcas .galeria{
