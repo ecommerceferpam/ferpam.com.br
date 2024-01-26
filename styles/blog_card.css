@@ -61,13 +61,16 @@
 } */
 @media screen and (max-width: 1150px){
     .blog-img{
-        width:60%;
+        width:65%;
     }
     .blog-produtos{
-        width: 40%;
+        width: 35%;
+    }
+    .blog-card .galeria_de_produtos .galeria{
+        grid-auto-columns: calc((100%/1) - 90px);
     }
 }
-@media screen and (max-width: 999px){
+@media screen and (max-width: 900px){
     .blog-card{
         flex-direction: column;
         align-items: center;
