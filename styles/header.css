@@ -93,6 +93,16 @@ header{
 .user-icons .bi-cart-fill{
     font-size: 25px;
 }
+.mobile_header{
+    display: none;
+    justify-content: space-between;
+    color: #fff;
+    font-size: 25px;
+    align-items: center;
+}
+.mobile_header .logo{
+    height: 30px;
+}
 
 
 .sub-header{
@@ -154,6 +164,13 @@ header{
     #mobile-search{
         display: block;
     }
+    .mobile_header{
+        display: flex;
+        width: 100%;
+    }
+    .mobile_header .logo{
+        display: block;
+    }
     .logo{
         display: none;
     }
@@ -162,10 +179,13 @@ header{
     }
     .header-content{
         padding: 12px 20px;
+        flex-direction: column;
+        gap: 10px;
     }
     .barra-de-pesquisa{
         height: 40px;
         font-size: 14px;
+        width: 100%;
     }
     .barra-de-pesquisa .icones i{
         font-size: 19px;
