@@ -1,0 +1,1609 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <title>Ferpam - Novo Layout</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="https://www.ferpam.com.br/media/favicon/stores/1/fav.png">
+
+    <!-- Scripts -->
+    <script src="./scripts/produtos.js" defer></script>
+    <script src="./scripts/marcas.js" defer></script>
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- Barra de progresso circular -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/radialIndicator/1.4.0/radialIndicator.min.js"></script>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="./styles/header.css">
+    <link rel="stylesheet" href="./styles/footer.css">
+    <link rel="stylesheet" href="./styles/banners.css">
+    <link rel="stylesheet" href="./styles/vantagens.css">
+    <link rel="stylesheet" href="./styles/produtos.css">
+    <link rel="stylesheet" href="./styles/marcas.css">
+    <link rel="stylesheet" href="./styles/blog_card.css">
+    <link rel="stylesheet" href="./styles/newsletter.css">
+    <link rel="stylesheet" href="./styles/opinioes.css">
+    <link rel="stylesheet" href="./styles/mobile_menu.css">
+    <link rel="stylesheet" href="./styles/style.css">
+
+</head>
+<body>
+    <!-- Header -->
+    <div class="faixa-topo">
+        <!-- <p>FRETE GRÁTIS PARA TODO O <span id="br">BR</span><span id="as">AS</span><span id="il">IL</span>! - <a href="">Veja as Regras</a></p> -->
+        <p>EM NOSSA LOJA FÍSICA TEMOS MAIS DE 28 MIL PRODUTOS E CONTINUAMOS CADASTRANDO DIARIAMENTE EM NOSSO SITE PARA ATENDER VOCÊ</p>
+    </div>
+    <header class="page-container">
+        <div class="page-size header-content">
+            <img src="./img/logoresize.png" alt="FERPAM" class="logo">
+            <div class="barra-de-pesquisa">
+                <p id="desktop-search">O que você procura?</p>
+                <p id="mobile-search">Busque na Ferpam</p>
+                <div class="icones">
+                    <i class="bi bi-search"></i>
+                    <i class="bi bi-mic-fill"></i>
+                </div>
+            </div>
+            <div class="user-icons">
+                <div class="user-btn">
+                    <i class="bi bi-whatsapp"></i>
+                    <div class="btn-desc">
+                        <p>Fale com <br><span>um Atendente</span></p>
+                    </div>
+                </div>
+                <div class="user-btn">
+                    <i class="bi bi-person-fill"></i>
+                    <div class="btn-desc">
+                        <p>Entre ou <br><span>Cadastre-se</span></p>
+                    </div>
+                </div>
+                <!-- <i class="bi bi-heart-fill"></i> -->
+                <i class="bi bi-cart-fill"></i>
+            </div>
+        </div>
+    </header>
+    <div class="sub-header page-container">
+        <div class="sub-header-content page-size">
+            <div class="categorias">
+                <i class="bi bi-caret-down-square"></i><p>CATEGORIAS</p>
+            </div>
+            <ul>
+                <li>Ferramentas e Máquinas</li>
+                <li>Irrigação e Borrachas</li>
+                <li id="epi">EPI - Proteção Individual</li>
+                <li>Solda em Geral</li>
+                <li>Ferragens</li>
+                <li>Mecânica</li>
+                <li id="jardinagem">Jardinagem</li>
+                <li>Serralheria</li>
+            </ul>
+        </div>
+    </div>
+    <!-- Fim do Header -->
+
+
+
+    <!-- Main -->
+    <main>
+        
+        <section class="banner-e-vantagens">
+            <!-- Banners -->
+            <div class="banner-container">
+
+                <div class="banners">
+                    <img src="./img/1.png" alt="" class="banner active" id="banner-1">
+                    <img src="./img/2.png" alt="" class="banner" id="banner-2">
+                    <img src="./img/3.png" alt="" class="banner" id="banner-3">
+                </div>
+                <script>
+                    // Função para verificar a largura da tela e alterar a URL da imagem, se necessário
+                    function verificarLarguraDaTela() {
+                      var larguraDaTela = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+                  
+                      // Verifica se a largura da tela é menor que 900 pixels
+                      if (larguraDaTela < 650) {
+                        // Altera a URL da imagem para uma versão menor
+                        document.getElementById('banner-1').src = './img/1-mobile.png';
+                        document.getElementById('banner-2').src = './img/2-mobile.png';
+                        document.getElementById('banner-3').src = './img/3-mobile.png';
+                      } else {
+                        // Se a tela for maior ou igual a 900 pixels, volta para a imagem original
+                        document.getElementById('banner-1').src = './img/1.png';
+                        document.getElementById('banner-2').src = './img/2.png';
+                        document.getElementById('banner-3').src = './img/3.png';
+                      }
+                    }
+                  
+                    // Adiciona um ouvinte de evento para chamar a função ao carregar a página e redimensionar a tela
+                    window.addEventListener('load', verificarLarguraDaTela);
+                    window.addEventListener('resize', verificarLarguraDaTela);
+                  </script>
+
+                <div class="buttons">
+                    <i class="next">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M9.71069 18.2929C10.1012 18.6834 10.7344 18.6834 11.1249 18.2929L16.0123 13.4006C16.7927 12.6195 16.7924 11.3537 16.0117 10.5729L11.1213 5.68254C10.7308 5.29202 10.0976 5.29202 9.70708 5.68254C9.31655 6.07307 9.31655 6.70623 9.70708 7.09676L13.8927 11.2824C14.2833 11.6729 14.2833 12.3061 13.8927 12.6966L9.71069 16.8787C9.32016 17.2692 9.32016 17.9023 9.71069 18.2929Z" fill="#ffffffad"></path> </g></svg>
+                    </i>
+                    <i class="prev">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M14.2893 5.70708C13.8988 5.31655 13.2657 5.31655 12.8751 5.70708L7.98768 10.5993C7.20729 11.3805 7.2076 12.6463 7.98837 13.427L12.8787 18.3174C13.2693 18.7079 13.9024 18.7079 14.293 18.3174C14.6835 17.9269 14.6835 17.2937 14.293 16.9032L10.1073 12.7175C9.71678 12.327 9.71678 11.6939 10.1073 11.3033L14.2893 7.12129C14.6799 6.73077 14.6799 6.0976 14.2893 5.70708Z" fill="#ffffffad"></path> </g></svg>
+                    </i>
+                </div>
+
+                <div class="dots">
+                    <div class="dot active" attr='0'onclick="switchImage(this)"></div>
+                    <div class="dot" attr='1'onclick="switchImage(this)"></div>
+                    <div class="dot" attr='2'onclick="switchImage(this)"></div>
+                </div>
+
+            </div>
+            <script type="text/javascript">
+                // Access the Images
+                let slideImages = document.querySelectorAll('.banner    ');
+                // Access the next and prev buttons
+                let next = document.querySelector('.next');
+                let prev = document.querySelector('.prev');
+                // Access the indicators
+                let dots = document.querySelectorAll('.dot');
+
+                var counter = 0;
+
+                // Code for next button
+                next.addEventListener('click', slideNext);
+                function slideNext(){
+                slideImages[counter].style.animation = 'next1 0.5s ease-in forwards';
+                if(counter >= slideImages.length-1){
+                    counter = 0;
+                }
+                else{
+                    counter++;
+                }
+                clearInterval(deletInterval);
+                autoSliding();
+
+                slideImages[counter].style.animation = 'next2 0.5s ease-in forwards';
+                indicators();
+                }
+
+                // Code for prev button
+                prev.addEventListener('click', slidePrev);
+                function slidePrev(){
+                slideImages[counter].style.animation = 'prev1 0.5s ease-in forwards';
+                if(counter == 0){
+                    counter = slideImages.length-1;
+                }
+                else{
+                    counter--;
+                }
+                clearInterval(deletInterval);
+                autoSliding();
+
+                slideImages[counter].style.animation = 'prev2 0.5s ease-in forwards';
+                indicators();
+                }
+
+                // Auto slideing
+                function autoSliding(){
+                    deletInterval = setInterval(timer, 4000);
+                    function timer(){
+                        slideNext();
+                        indicators();
+                    }
+                }
+                autoSliding();
+
+                // Stop auto sliding when mouse is over
+                const container = document.querySelector('.banner-container');
+                container.addEventListener('mouseover', function(){
+                    clearInterval(deletInterval);
+                });
+
+                // Resume sliding when mouse is out
+                container.addEventListener('mouseout', autoSliding);
+
+                // Add and remove active class from the indicators
+                function indicators(){
+                    for(i = 0; i < dots.length; i++){
+                        dots[i].className = dots[i].className.replace(' active', '');
+                    }
+                    dots[counter].className += ' active';
+                }
+
+                // Add click event to the indicator
+                function switchImage(currentImage){
+                    currentImage.classList.add('active');
+                    var imageId = currentImage.getAttribute('attr');
+                    if(imageId > counter){
+                    slideImages[counter].style.animation = 'next1 0.5s ease-in forwards';
+                    counter = imageId;
+                    slideImages[counter].style.animation = 'next2 0.5s ease-in forwards';
+                    }
+                    else if(imageId == counter){
+                        return;
+                    }
+                    else{
+                    slideImages[counter].style.animation = 'prev1 0.5s ease-in forwards';
+                    counter = imageId;
+                    slideImages[counter].style.animation = 'prev2 0.5s ease-in forwards';	
+                    }
+                    indicators();
+                }
+            </script>
+            <!-- Fim Banners -->
+
+            <!-- <div class="vantagens-container">
+                <div class="page-size">
+                    <div class="vantagens">
+                        <div class="vantagem active">
+                            <i class="bi bi-patch-check"></i> GANHE 5% DE DESCONTO À VISTA
+                        </div>
+                        <div class="vantagem">
+                            <i class="bi bi-coin"></i> PAGUE EM ATÉ 10X SEM JUROS
+                        </div>
+                        <div class="vantagem">
+                            <i class="bi bi-shop"></i> COMPRE NO SITE E RETIRE NA LOJA
+                        </div>
+                    </div>
+
+                    <div class="dotsVantagens">
+                        <div class="dotVantagem active" attr='0'onclick="switchVantagem(this)"></div>
+                        <div class="dotVantagem" attr='1'onclick="switchVantagem(this)"></div>
+                        <div class="dotVantagem" attr='2'onclick="switchVantagem(this)"></div>
+                    </div>
+                </div>
+            </div>
+            <script type="text/javascript">
+
+                let vantagens = document.querySelectorAll('.vantagem');
+                let dotsVantagens = document.querySelectorAll('.dotVantagem');
+                var contadorVantagens = 0;
+
+                // Code for next button
+                function slideNextVantagens(){
+                    vantagens[contadorVantagens].style.animation = 'next1 0.5s ease-in forwards';
+                    if(contadorVantagens >= vantagens.length-1){
+                        contadorVantagens = 0;
+                    }
+                    else{
+                        contadorVantagens++;
+                    }
+                    clearInterval(deletIntervalVantagens);
+                    autoSlidingVantagens();
+
+                    vantagens[contadorVantagens].style.animation = 'next2 0.5s ease-in forwards';
+                    indicatorsVantagens();
+                }
+
+
+                // Auto slideing
+                function autoSlidingVantagens(){
+                    deletIntervalVantagens = setInterval(timer, 6000);
+                    function timer(){
+                        slideNextVantagens();
+                        indicatorsVantagens();
+                    }
+                }
+                autoSlidingVantagens();
+
+                // Stop auto sliding when mouse is over
+                const containerVantagens = document.querySelector('.vantagens-container');
+                containerVantagens.addEventListener('mouseover', function(){
+                    clearInterval(deletIntervalVantagens);
+                });
+
+                // Resume sliding when mouse is out
+                containerVantagens.addEventListener('mouseout', autoSlidingVantagens);
+
+                // Add and remove active class from the indicatorsVantagens
+                function indicatorsVantagens(){
+                    for(i = 0; i < dotsVantagens.length; i++){
+                        dotsVantagens[i].className = dotsVantagens[i].className.replace(' active', '');
+                    }
+                    dotsVantagens[contadorVantagens].className += ' active';
+                }
+
+                // Add click event to the indicator
+                function switchVantagem(currentVantagem){
+                    currentVantagem.classList.add('active');
+                    var imageId = currentVantagem.getAttribute('attr');
+                    if(imageId > contadorVantagens){
+                        vantagens[contadorVantagens].style.animation = 'next1 0.5s ease-in forwards';
+                        contadorVantagens = imageId;
+                        vantagens[contadorVantagens].style.animation = 'next2 0.5s ease-in forwards';
+                    }
+                    indicatorsVantagens();
+                }
+            </script> -->
+        </section>
+        <div class="main-content page-size">
+            
+            
+            <!-- Ofertas da Semana -->
+            <section class="sessao-produtos page-container page-size" id="ofertas_do_dia">
+                <div class="ofertas_de_hoje">
+                    <div class="row1">
+                        <h1 id="oferta-desktop">Ofertas de Hoje</h1>
+                        <h1 id="oferta-mobile">Só Hoje</h1>
+                        <div class="line"></div>
+                        <div class="countdown-container">
+                            <div class="hrs">
+                                <div id="horas" class="countdown-item"></div>
+                                <p>HRS</p>
+                            </div>
+                            <span>:</span>
+                            <div class="min">
+                                <div id="minutos" class="countdown-item"></div>
+                                <p>MIN</p>
+                            </div>
+                            <span>:</span>
+                            <div class="seg">
+                                <div id="segundos" class="countdown-item"></div>
+                                <p>SEG</p>
+                            </div>
+                        </div>
+                        <script>
+                            // Função para calcular o tempo restante até o próximo dia
+                            function calcularTempoRestante() {
+                              const agora = new Date();
+                              const amanha = new Date(agora);
+                              amanha.setDate(agora.getDate() + 1);
+                              amanha.setHours(0, 0, 0, 0);
+                        
+                              const diferenca = amanha - agora;
+                        
+                              const horas = Math.floor((diferenca % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                              const minutos = Math.floor((diferenca % (1000 * 60 * 60)) / (1000 * 60));
+                              const segundos = Math.floor((diferenca % (1000 * 60)) / 1000);
+                        
+                              return { horas, minutos, segundos };
+                            }
+                        
+                            // Função para atualizar o countdown
+                            function atualizarCountdown() {
+                              const tempoRestante = calcularTempoRestante();
+                              if(tempoRestante.horas<10){
+                                document.getElementById('horas').innerHTML = '0'+tempoRestante.horas;
+                              }else{
+                                  document.getElementById('horas').innerHTML = tempoRestante.horas;
+                              }
+                              if(tempoRestante.minutos<10){
+                                document.getElementById('minutos').innerHTML = '0'+tempoRestante.minutos;
+                              }else{
+                                document.getElementById('minutos').innerHTML = tempoRestante.minutos;
+                              }
+                              if(tempoRestante.segundos<10){
+                                document.getElementById('segundos').innerHTML = '0'+tempoRestante.segundos;
+                              }else{
+                                document.getElementById('segundos').innerHTML = tempoRestante.segundos;
+                              }
+                            }
+                        
+                            // Atualizar o countdown a cada segundo
+                            setInterval(atualizarCountdown, 1000);
+                        
+                            // Inicializar o countdown ao carregar a página
+                            atualizarCountdown();
+                        </script>
+                    </div>
+                    <div class="galeria_de_produtos">
+        
+                        <i id="left">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M14.2893 5.70708C13.8988 5.31655 13.2657 5.31655 12.8751 5.70708L7.98768 10.5993C7.20729 11.3805 7.2076 12.6463 7.98837 13.427L12.8787 18.3174C13.2693 18.7079 13.9024 18.7079 14.293 18.3174C14.6835 17.9269 14.6835 17.2937 14.293 16.9032L10.1073 12.7175C9.71678 12.327 9.71678 11.6939 10.1073 11.3033L14.2893 7.12129C14.6799 6.73077 14.6799 6.0976 14.2893 5.70708Z" fill="#666666ad"></path> </g></svg>
+                        </i>
+                        
+                        <ul class="galeria">
+                            <li class="card_produto">
+                                <div class="conteudo_card">
+                                    <div class="desc_produto">
+                                        <div class="imagem_produto">
+                                            <img src="./img/produtos/inversora_solda.jpg" alt="">
+                                        </div>
+                                        <div class="titulo_produto">
+                                            1.000 Metros de Arame Liso Ovalado 700Kgf Pg 14 x 16 Vonder
+                                        </div>
+                                        <div class="preco1">
+                                            <div class="preco_desconto">R$989,88</div>
+                                            <span>à vista no <span class="bold">Pix</span></span>
+                                        </div>
+                                        <div class="preco2">
+                                            <span>Ou <span class="preco_normal bold">R$1.041,98</span> em até 10X de R$104,20</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="card_produto">
+                                <div class="conteudo_card">
+                                    <div class="desc_produto">
+                                        <div class="imagem_produto">
+                                            <img src="./img/produtos/arame.jpg" alt="">
+                                        </div>
+                                        <div class="titulo_produto">
+                                            1.000 Metros de Arame Liso Ovalado 700Kgf Pg 14 x 16 Vonder
+                                        </div>
+                                        <div class="preco1">
+                                            <div class="preco_desconto">R$438,00</div>
+                                            <span>à vista no <span class="bold">Pix</span></span>
+                                        </div>
+                                        <div class="preco2">
+                                            <span>Ou <span class="preco_normal bold">R$462,00</span> em até 9X de R$51,33</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="card_produto">
+                                <div class="conteudo_card">
+                                    <div class="desc_produto">
+                                        <div class="imagem_produto">
+                                            <img src="./img/produtos/esmerilhadeira.jpeg" alt="">
+                                        </div>
+                                        <div class="titulo_produto">
+                                            Esmerilhadeira angular Bosch GWS 9-125 S 1,7 kg 900W 220V
+                                        </div>
+                                        <div class="preco1">
+                                            <div class="preco_desconto">R$569,95</div>
+                                            <span>à vista no <span class="bold">Pix</span></span>
+                                        </div>
+                                        <div class="preco2">
+                                            <span>Ou <span class="preco_normal bold">R$599,95</span> em até 10X de R$60,00</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="card_produto">
+                                <div class="conteudo_card">
+                                    <div class="desc_produto">
+                                        <div class="imagem_produto">
+                                            <img src="./img/produtos/inversora_boxer_1_.jpg" alt="">
+                                        </div>
+                                        <div class="titulo_produto">
+                                            Inversora 140A Touch 145 Boxer 220V
+                                        </div>
+                                        <div class="preco1">
+                                            <div class="preco_desconto">R$508,94</div>
+                                            <span>à vista no <span class="bold">Pix</span></span>
+                                        </div>
+                                        <div class="preco2">
+                                            <span>Ou <span class="preco_normal bold">R$535,73</span> 10X de R$53,57</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="card_produto">
+                                <div class="conteudo_card">
+                                    <div class="desc_produto">
+                                        <div class="imagem_produto">
+                                            <img src="./img/produtos/furadeira.jpg" alt="">
+                                        </div>
+                                        <div class="titulo_produto">
+                                            Furadeira de Impacto Skil 6555 570W 220V acessórios e Maleta
+                                        </div>
+                                        <div class="preco1">
+                                            <div class="preco_desconto">R$374,74</div>
+                                            <span>à vista no <span class="bold">Pix</span></span>
+                                        </div>
+                                        <div class="preco2">
+                                            <span>Ou <span class="preco_normal bold">R$394,46</span> em até 7X de R$56,35</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="card_produto">
+                                <div class="conteudo_card">
+                                    <div class="desc_produto">
+                                        <div class="imagem_produto">
+                                            <img src="./img/produtos/fita_isolante.jpg" alt="">
+                                        </div>
+                                        <div class="titulo_produto">
+                                            Fita Isolante Imperial 20m 3M
+                                        </div>
+                                        <div class="preco1">
+                                            <div class="preco_desconto">R$6,66</div>
+                                            <span>à vista no <span class="bold">Pix</span></span>
+                                        </div>
+                                        <div class="preco2">
+                                            <span>Ou <span class="preco_normal bold">R$7,01</span> em até 1X de R$7,01</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="card_produto">
+                                <div class="conteudo_card">
+                                    <div class="desc_produto">
+                                        <div class="imagem_produto">
+                                            <img src="./img/produtos/serra_marmore.jpg" alt="">
+                                        </div>
+                                        <div class="titulo_produto">
+                                            Serra Mármore a seco GDC 150 TITAN 1500W 220V Bosch
+                                        </div>
+                                        <div class="preco1">
+                                            <div class="preco_desconto">R$370,44</div>
+                                            <span>à vista no <span class="bold">Pix</span></span>
+                                        </div>
+                                        <div class="preco2">
+                                            <span>Ou <span class="preco_normal bold">R$389,94</span> em até 7X de R$55,71</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="card_produto">
+                                <div class="conteudo_card">
+                                    <div class="desc_produto">
+                                        <div class="imagem_produto">
+                                            <img src="./img/produtos/capa_de_chuva.jpg" alt="">
+                                        </div>
+                                        <div class="titulo_produto">
+                                            Capa de Chuva para Motociclista Tamanho M Pantaneiro
+                                        </div>
+                                        <div class="preco1">
+                                            <div class="preco_desconto">R$72,11</div>
+                                            <span>à vista no <span class="bold">Pix</span></span>
+                                        </div>
+                                        <div class="preco2">
+                                            <span>Ou <span class="preco_normal bold">R$75,90</span> em até 1X de R$75,90</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+        
+                        <i id="right">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M9.71069 18.2929C10.1012 18.6834 10.7344 18.6834 11.1249 18.2929L16.0123 13.4006C16.7927 12.6195 16.7924 11.3537 16.0117 10.5729L11.1213 5.68254C10.7308 5.29202 10.0976 5.29202 9.70708 5.68254C9.31655 6.07307 9.31655 6.70623 9.70708 7.09676L13.8927 11.2824C14.2833 11.6729 14.2833 12.3061 13.8927 12.6966L9.71069 16.8787C9.32016 17.2692 9.32016 17.9023 9.71069 18.2929Z" fill="#666666ad"></path> </g></svg>
+                        </i>
+        
+                    </div>
+                </div>
+            </section>
+            <!-- Fim Ofertas da Semana-->
+    
+            <!-- Mais Vendidos -->
+            <section class="sessao-produtos page-container page-size">
+    
+                <h1>Mais Vendidos</h1>
+    
+                <div class="galeria_de_produtos">
+    
+                    <i id="left">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M14.2893 5.70708C13.8988 5.31655 13.2657 5.31655 12.8751 5.70708L7.98768 10.5993C7.20729 11.3805 7.2076 12.6463 7.98837 13.427L12.8787 18.3174C13.2693 18.7079 13.9024 18.7079 14.293 18.3174C14.6835 17.9269 14.6835 17.2937 14.293 16.9032L10.1073 12.7175C9.71678 12.327 9.71678 11.6939 10.1073 11.3033L14.2893 7.12129C14.6799 6.73077 14.6799 6.0976 14.2893 5.70708Z" fill="#666666ad"></path> </g></svg>
+                    </i>
+                    
+                    <ul class="galeria">
+                        <li class="card_produto">
+                            <div class="frete0">
+                            </div>
+                            <div class="conteudo_card">
+                                <div class="imagem_produto">
+                                    <img src="./img/produtos/cotovelo.jpg" alt="">
+                                </div>
+                                <div class="desc_produto">
+                                    <div class="titulo_produto">
+                                        Cotovelo Simples 1/2" SBE050 Rain Bird
+                                    </div>
+                                    <div class="preco1">
+                                        <div class="preco_desconto">R$2,02</div>
+                                        <span>à vista no <span class="bold">Pix</span></span>
+                                    </div>
+                                    <div class="preco2">
+                                        <span>Ou <span class="preco_normal bold">R$2,13</span> em até 1X de R$2,13</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="card_produto">
+                            <div class="frete1">
+                                <svg style="margin-right: 4px;" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="https://www.w3.org/2000/svg">
+                                    <path d="M1.89534 9.00033L1.39534 8.00033H4.89534L4.49534 7.00033H1.22868L0.728678 6.00033H5.92868L5.52868 5.00033H0.635345L0.0620117 4.00033H2.56201C2.56201 3.6467 2.70249 3.30756 2.95254 3.05752C3.20258 2.80747 3.54172 2.66699 3.89534 2.66699H11.8953V5.33366H13.8953L15.8953 8.00033V11.3337H14.562C14.562 11.8641 14.3513 12.3728 13.9762 12.7479C13.6012 13.1229 13.0924 13.3337 12.562 13.3337C12.0316 13.3337 11.5229 13.1229 11.1478 12.7479C10.7727 12.3728 10.562 11.8641 10.562 11.3337H7.89534C7.89534 11.8641 7.68463 12.3728 7.30956 12.7479C6.93449 13.1229 6.42578 13.3337 5.89534 13.3337C5.36491 13.3337 4.8562 13.1229 4.48113 12.7479C4.10606 12.3728 3.89534 11.8641 3.89534 11.3337H2.56201V9.00033H1.89534ZM12.562 12.3337C12.8272 12.3337 13.0816 12.2283 13.2691 12.0408C13.4567 11.8532 13.562 11.5989 13.562 11.3337C13.562 11.0684 13.4567 10.8141 13.2691 10.6266C13.0816 10.439 12.8272 10.3337 12.562 10.3337C12.2968 10.3337 12.0424 10.439 11.8549 10.6266C11.6674 10.8141 11.562 11.0684 11.562 11.3337C11.562 11.5989 11.6674 11.8532 11.8549 12.0408C12.0424 12.2283 12.2968 12.3337 12.562 12.3337ZM13.562 6.33366H11.8953V8.00033H14.8687L13.562 6.33366ZM5.89534 12.3337C6.16056 12.3337 6.41492 12.2283 6.60245 12.0408C6.78999 11.8532 6.89534 11.5989 6.89534 11.3337C6.89534 11.0684 6.78999 10.8141 6.60245 10.6266C6.41492 10.439 6.16056 10.3337 5.89534 10.3337C5.63013 10.3337 5.37577 10.439 5.18824 10.6266C5.0007 10.8141 4.89534 11.0684 4.89534 11.3337C4.89534 11.5989 5.0007 11.8532 5.18824 12.0408C5.37577 12.2283 5.63013 12.3337 5.89534 12.3337Z" fill="#fff"></path>
+                                </svg>
+    
+                                <!-- <svg height="200px" width="200px" version="1.1" id="_x32_" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve" fill="#ffffff" stroke="#ffffff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <style type="text/css"> .st0{fill:#ffffff;} </style> <g> <path class="st0" d="M311.069,130.515c-0.963-5.641-5.851-9.768-11.578-9.768H35.43c-7.61,0-13.772,6.169-13.772,13.765 c0,7.61,6.162,13.772,13.772,13.772h64.263c7.61,0,13.772,6.17,13.772,13.773c0,7.603-6.162,13.772-13.772,13.772H13.772 C6.169,175.829,0,181.998,0,189.601c0,7.603,6.169,13.764,13.772,13.764h117.114c6.72,0,12.172,5.46,12.172,12.18 c0,6.72-5.452,12.172-12.172,12.172H68.665c-7.61,0-13.772,6.17-13.772,13.773c0,7.602,6.162,13.772,13.772,13.772h45.857 c6.726,0,12.179,5.452,12.179,12.172c0,6.719-5.453,12.172-12.179,12.172H51.215c-7.61,0-13.772,6.169-13.772,13.772 c0,7.603,6.162,13.772,13.772,13.772h87.014l5.488,31.042h31.52c-1.854,4.504-2.911,9.421-2.911,14.598 c0,21.245,17.218,38.464,38.464,38.464c21.237,0,38.456-17.219,38.456-38.464c0-5.177-1.057-10.094-2.911-14.598h100.04 L311.069,130.515z M227.342,352.789c0,9.146-7.407,16.553-16.553,16.553c-9.152,0-16.56-7.407-16.56-16.553 c0-6.364,3.627-11.824,8.892-14.598h15.329C223.714,340.965,227.342,346.424,227.342,352.789z"></path> <path class="st0" d="M511.598,314.072l-15.799-77.941l-57.689-88.759H333.074l32.534,190.819h38.42 c-1.846,4.504-2.904,9.421-2.904,14.598c0,21.245,17.219,38.464,38.456,38.464c21.246,0,38.464-17.219,38.464-38.464 c0-5.177-1.057-10.094-2.91-14.598h16.741c6.039,0,11.759-2.708,15.582-7.386C511.273,326.136,512.8,319.988,511.598,314.072z M392.529,182.882h26.314l34.162,52.547h-51.512L392.529,182.882z M456.14,352.789c0,9.146-7.407,16.553-16.56,16.553 c-9.138,0-16.552-7.407-16.552-16.553c0-6.364,3.635-11.824,8.892-14.598h15.329C452.513,340.965,456.14,346.424,456.14,352.789z"></path> </g> </g></svg> -->
+    
+                                <p>FRETE GRÁTIS TODO O BRASIL</p>
+                            </div>
+                            <div class="conteudo_card">
+                                <div class="imagem_produto">
+                                    <img src="./img/produtos/eletrodo.jpg" alt="">
+                                </div>
+                                <div class="desc_produto">
+                                    <div class="titulo_produto">
+                                        Eletrodo Weld 60.13 2,50mm 1kg Esab
+                                    </div>
+                                    <div class="preco1">
+                                        <div class="preco_desconto">R$8,59</div>
+                                        <span>à vista no <span class="bold">Pix</span></span>
+                                    </div>
+                                    <div class="preco2">
+                                        <span>Ou <span class="preco_normal bold">R$9,04</span> em até 1X de R$9,04</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="card_produto">
+                            <div class="frete0"></div>
+                            <div class="conteudo_card">
+                                <div class="imagem_produto">
+                                    <img src="./img/produtos/acessorio_para_aspersor.jpg" alt="">
+                                </div>
+                                <div class="desc_produto">
+                                    <div class="titulo_produto">
+                                        Acessório Para Aspersor LF Setorial Rain Bird 118366
+                                    </div>
+                                    <div class="preco1">
+                                        <div class="preco_desconto">R$13,86</div>
+                                        <span>à vista no <span class="bold">Pix</span></span>
+                                    </div>
+                                    <div class="preco2">
+                                        <span>Ou <span class="preco_normal bold">R$14,59</span> em até 1X de R$14,59</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="card_produto">
+                            <div class="frete0"></div>
+                            <div class="conteudo_card">
+                                <div class="imagem_produto">
+                                    <img src="./img/produtos/pastilha.jpg" alt="">
+                                </div>
+                                <div class="desc_produto">
+                                    <div class="titulo_produto">
+                                        Pastilha Para Desinfecção De Água 200g Hidroazul
+                                    </div>
+                                    <div class="preco1">
+                                        <div class="preco_desconto">R$8,08</div>
+                                        <span>à vista no <span class="bold">Pix</span></span>
+                                    </div>
+                                    <div class="preco2">
+                                        <span>Ou <span class="preco_normal bold">R$8,50</span> em até 1X de R$8,50</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="card_produto">
+                            <div class="frete1">
+                                <svg style="margin-right: 4px;" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="https://www.w3.org/2000/svg">
+                                    <path d="M1.89534 9.00033L1.39534 8.00033H4.89534L4.49534 7.00033H1.22868L0.728678 6.00033H5.92868L5.52868 5.00033H0.635345L0.0620117 4.00033H2.56201C2.56201 3.6467 2.70249 3.30756 2.95254 3.05752C3.20258 2.80747 3.54172 2.66699 3.89534 2.66699H11.8953V5.33366H13.8953L15.8953 8.00033V11.3337H14.562C14.562 11.8641 14.3513 12.3728 13.9762 12.7479C13.6012 13.1229 13.0924 13.3337 12.562 13.3337C12.0316 13.3337 11.5229 13.1229 11.1478 12.7479C10.7727 12.3728 10.562 11.8641 10.562 11.3337H7.89534C7.89534 11.8641 7.68463 12.3728 7.30956 12.7479C6.93449 13.1229 6.42578 13.3337 5.89534 13.3337C5.36491 13.3337 4.8562 13.1229 4.48113 12.7479C4.10606 12.3728 3.89534 11.8641 3.89534 11.3337H2.56201V9.00033H1.89534ZM12.562 12.3337C12.8272 12.3337 13.0816 12.2283 13.2691 12.0408C13.4567 11.8532 13.562 11.5989 13.562 11.3337C13.562 11.0684 13.4567 10.8141 13.2691 10.6266C13.0816 10.439 12.8272 10.3337 12.562 10.3337C12.2968 10.3337 12.0424 10.439 11.8549 10.6266C11.6674 10.8141 11.562 11.0684 11.562 11.3337C11.562 11.5989 11.6674 11.8532 11.8549 12.0408C12.0424 12.2283 12.2968 12.3337 12.562 12.3337ZM13.562 6.33366H11.8953V8.00033H14.8687L13.562 6.33366ZM5.89534 12.3337C6.16056 12.3337 6.41492 12.2283 6.60245 12.0408C6.78999 11.8532 6.89534 11.5989 6.89534 11.3337C6.89534 11.0684 6.78999 10.8141 6.60245 10.6266C6.41492 10.439 6.16056 10.3337 5.89534 10.3337C5.63013 10.3337 5.37577 10.439 5.18824 10.6266C5.0007 10.8141 4.89534 11.0684 4.89534 11.3337C4.89534 11.5989 5.0007 11.8532 5.18824 12.0408C5.37577 12.2283 5.63013 12.3337 5.89534 12.3337Z" fill="#fff"></path>
+                                </svg>
+                                
+                                <p>FRETE GRÁTIS TODO O BRASIL</p>
+                            </div>
+                            <div class="conteudo_card">
+                                <div class="imagem_produto">
+                                    <img src="./img/produtos/disco_serra.jpg" alt="">
+                                </div>
+        
+                                <div class="desc_produto">
+                                    <div class="titulo_produto">
+                                        Disco Serra Circular Vidia 7.1/4x24 Dentes Tyrolit
+                                    </div>
+                                    <div class="preco1">
+                                        <div class="preco_desconto">R$30,69</div>
+                                        <span>à vista no <span class="bold">Pix</span></span>
+                                    </div>
+                                    <div class="preco2">
+                                        <span>Ou <span class="preco_normal bold">R$32,31</span> em até 1X de R$32,31</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="card_produto">
+                            <div class="frete1">
+                                                            <svg style="margin-right: 4px;" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="https://www.w3.org/2000/svg">
+                                    <path d="M1.89534 9.00033L1.39534 8.00033H4.89534L4.49534 7.00033H1.22868L0.728678 6.00033H5.92868L5.52868 5.00033H0.635345L0.0620117 4.00033H2.56201C2.56201 3.6467 2.70249 3.30756 2.95254 3.05752C3.20258 2.80747 3.54172 2.66699 3.89534 2.66699H11.8953V5.33366H13.8953L15.8953 8.00033V11.3337H14.562C14.562 11.8641 14.3513 12.3728 13.9762 12.7479C13.6012 13.1229 13.0924 13.3337 12.562 13.3337C12.0316 13.3337 11.5229 13.1229 11.1478 12.7479C10.7727 12.3728 10.562 11.8641 10.562 11.3337H7.89534C7.89534 11.8641 7.68463 12.3728 7.30956 12.7479C6.93449 13.1229 6.42578 13.3337 5.89534 13.3337C5.36491 13.3337 4.8562 13.1229 4.48113 12.7479C4.10606 12.3728 3.89534 11.8641 3.89534 11.3337H2.56201V9.00033H1.89534ZM12.562 12.3337C12.8272 12.3337 13.0816 12.2283 13.2691 12.0408C13.4567 11.8532 13.562 11.5989 13.562 11.3337C13.562 11.0684 13.4567 10.8141 13.2691 10.6266C13.0816 10.439 12.8272 10.3337 12.562 10.3337C12.2968 10.3337 12.0424 10.439 11.8549 10.6266C11.6674 10.8141 11.562 11.0684 11.562 11.3337C11.562 11.5989 11.6674 11.8532 11.8549 12.0408C12.0424 12.2283 12.2968 12.3337 12.562 12.3337ZM13.562 6.33366H11.8953V8.00033H14.8687L13.562 6.33366ZM5.89534 12.3337C6.16056 12.3337 6.41492 12.2283 6.60245 12.0408C6.78999 11.8532 6.89534 11.5989 6.89534 11.3337C6.89534 11.0684 6.78999 10.8141 6.60245 10.6266C6.41492 10.439 6.16056 10.3337 5.89534 10.3337C5.63013 10.3337 5.37577 10.439 5.18824 10.6266C5.0007 10.8141 4.89534 11.0684 4.89534 11.3337C4.89534 11.5989 5.0007 11.8532 5.18824 12.0408C5.37577 12.2283 5.63013 12.3337 5.89534 12.3337Z" fill="#fff"></path>
+                                </svg>
+                                <p>FRETE GRÁTIS TODO O BRASIL</p>
+                            </div>
+                            <div class="conteudo_card">
+                                <div class="imagem_produto">
+                                    <img src="./img/produtos/aqui_o_seu_12_.jpg" alt="">
+                                </div>
+                                <div class="desc_produto">
+                                    <div class="titulo_produto">
+                                        Cloro Multiação Balde 10Kg Hidroazul
+                                    </div>
+                                    <div class="preco1">
+                                        <div class="preco_desconto">R$199,41</div>
+                                        <span>à vista no <span class="bold">Pix</span></span>
+                                    </div>
+                                    <div class="preco2">
+                                        <span>Ou <span class="preco_normal bold">R$209,91</span> em até 4X de R$52,48</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="card_produto">
+                            <div class="frete1">
+                                                            <svg style="margin-right: 4px;" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="https://www.w3.org/2000/svg">
+                                    <path d="M1.89534 9.00033L1.39534 8.00033H4.89534L4.49534 7.00033H1.22868L0.728678 6.00033H5.92868L5.52868 5.00033H0.635345L0.0620117 4.00033H2.56201C2.56201 3.6467 2.70249 3.30756 2.95254 3.05752C3.20258 2.80747 3.54172 2.66699 3.89534 2.66699H11.8953V5.33366H13.8953L15.8953 8.00033V11.3337H14.562C14.562 11.8641 14.3513 12.3728 13.9762 12.7479C13.6012 13.1229 13.0924 13.3337 12.562 13.3337C12.0316 13.3337 11.5229 13.1229 11.1478 12.7479C10.7727 12.3728 10.562 11.8641 10.562 11.3337H7.89534C7.89534 11.8641 7.68463 12.3728 7.30956 12.7479C6.93449 13.1229 6.42578 13.3337 5.89534 13.3337C5.36491 13.3337 4.8562 13.1229 4.48113 12.7479C4.10606 12.3728 3.89534 11.8641 3.89534 11.3337H2.56201V9.00033H1.89534ZM12.562 12.3337C12.8272 12.3337 13.0816 12.2283 13.2691 12.0408C13.4567 11.8532 13.562 11.5989 13.562 11.3337C13.562 11.0684 13.4567 10.8141 13.2691 10.6266C13.0816 10.439 12.8272 10.3337 12.562 10.3337C12.2968 10.3337 12.0424 10.439 11.8549 10.6266C11.6674 10.8141 11.562 11.0684 11.562 11.3337C11.562 11.5989 11.6674 11.8532 11.8549 12.0408C12.0424 12.2283 12.2968 12.3337 12.562 12.3337ZM13.562 6.33366H11.8953V8.00033H14.8687L13.562 6.33366ZM5.89534 12.3337C6.16056 12.3337 6.41492 12.2283 6.60245 12.0408C6.78999 11.8532 6.89534 11.5989 6.89534 11.3337C6.89534 11.0684 6.78999 10.8141 6.60245 10.6266C6.41492 10.439 6.16056 10.3337 5.89534 10.3337C5.63013 10.3337 5.37577 10.439 5.18824 10.6266C5.0007 10.8141 4.89534 11.0684 4.89534 11.3337C4.89534 11.5989 5.0007 11.8532 5.18824 12.0408C5.37577 12.2283 5.63013 12.3337 5.89534 12.3337Z" fill="#fff"></path>
+                                </svg>
+                                <p>FRETE GRÁTIS TODO O BRASIL</p>
+                            </div>
+                            <div class="conteudo_card">
+                                <div class="imagem_produto">
+                                    <img src="./img/produtos/botina.jpg" alt="">
+                                </div>
+                                <div class="desc_produto">
+                                    <div class="titulo_produto">
+                                        Botina de Segurança Microfibra Eletricista 70B19E-BP Marluvas N° 39
+                                    </div>
+                                    <div class="preco1">
+                                        <div class="preco_desconto">R$132,72</div>
+                                        <span>à vista no <span class="bold">Pix</span></span>
+                                    </div>
+                                    <div class="preco2">
+                                        <span>Ou <span class="preco_normal bold">R$139,71</span> em até 2X de R$69,86</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="card_produto">
+                            <div class="frete1">
+                                                            <svg style="margin-right: 4px;" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="https://www.w3.org/2000/svg">
+                                    <path d="M1.89534 9.00033L1.39534 8.00033H4.89534L4.49534 7.00033H1.22868L0.728678 6.00033H5.92868L5.52868 5.00033H0.635345L0.0620117 4.00033H2.56201C2.56201 3.6467 2.70249 3.30756 2.95254 3.05752C3.20258 2.80747 3.54172 2.66699 3.89534 2.66699H11.8953V5.33366H13.8953L15.8953 8.00033V11.3337H14.562C14.562 11.8641 14.3513 12.3728 13.9762 12.7479C13.6012 13.1229 13.0924 13.3337 12.562 13.3337C12.0316 13.3337 11.5229 13.1229 11.1478 12.7479C10.7727 12.3728 10.562 11.8641 10.562 11.3337H7.89534C7.89534 11.8641 7.68463 12.3728 7.30956 12.7479C6.93449 13.1229 6.42578 13.3337 5.89534 13.3337C5.36491 13.3337 4.8562 13.1229 4.48113 12.7479C4.10606 12.3728 3.89534 11.8641 3.89534 11.3337H2.56201V9.00033H1.89534ZM12.562 12.3337C12.8272 12.3337 13.0816 12.2283 13.2691 12.0408C13.4567 11.8532 13.562 11.5989 13.562 11.3337C13.562 11.0684 13.4567 10.8141 13.2691 10.6266C13.0816 10.439 12.8272 10.3337 12.562 10.3337C12.2968 10.3337 12.0424 10.439 11.8549 10.6266C11.6674 10.8141 11.562 11.0684 11.562 11.3337C11.562 11.5989 11.6674 11.8532 11.8549 12.0408C12.0424 12.2283 12.2968 12.3337 12.562 12.3337ZM13.562 6.33366H11.8953V8.00033H14.8687L13.562 6.33366ZM5.89534 12.3337C6.16056 12.3337 6.41492 12.2283 6.60245 12.0408C6.78999 11.8532 6.89534 11.5989 6.89534 11.3337C6.89534 11.0684 6.78999 10.8141 6.60245 10.6266C6.41492 10.439 6.16056 10.3337 5.89534 10.3337C5.63013 10.3337 5.37577 10.439 5.18824 10.6266C5.0007 10.8141 4.89534 11.0684 4.89534 11.3337C4.89534 11.5989 5.0007 11.8532 5.18824 12.0408C5.37577 12.2283 5.63013 12.3337 5.89534 12.3337Z" fill="#fff"></path>
+                                </svg>
+                                <p>FRETE GRÁTIS TODO O BRASIL</p>
+                            </div>
+                            <div class="conteudo_card">
+                                <div class="imagem_produto">
+                                    <img src="./img/produtos/furadeira.jpg" alt="">
+                                </div>
+                                <div class="desc_produto">
+                                    <div class="titulo_produto">
+                                        Furadeira de Impacto Skil 6555 570W 220V acessórios e Maleta
+                                    </div>
+                                    <div class="preco1">
+                                        <div class="preco_desconto">R$374,74</div>
+                                        <span>à vista no <span class="bold">Pix</span></span>
+                                    </div>
+                                    <div class="preco2">
+                                        <span>Ou <span class="preco_normal bold">R$394,46</span> em até 7X de R$56,35</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+    
+                    <i id="right">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M9.71069 18.2929C10.1012 18.6834 10.7344 18.6834 11.1249 18.2929L16.0123 13.4006C16.7927 12.6195 16.7924 11.3537 16.0117 10.5729L11.1213 5.68254C10.7308 5.29202 10.0976 5.29202 9.70708 5.68254C9.31655 6.07307 9.31655 6.70623 9.70708 7.09676L13.8927 11.2824C14.2833 11.6729 14.2833 12.3061 13.8927 12.6966L9.71069 16.8787C9.32016 17.2692 9.32016 17.9023 9.71069 18.2929Z" fill="#666666ad"></path> </g></svg>
+                    </i>
+    
+                </div>
+                
+            </section>
+            <!-- Fim Mais Vendidos -->
+    
+            <!-- Mais Vistos -->
+            <section class="sessao-produtos page-container page-size">
+    
+                <h1>Mais Vistos</h1>
+    
+                <div class="galeria_de_produtos">
+    
+                    <i id="left">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M14.2893 5.70708C13.8988 5.31655 13.2657 5.31655 12.8751 5.70708L7.98768 10.5993C7.20729 11.3805 7.2076 12.6463 7.98837 13.427L12.8787 18.3174C13.2693 18.7079 13.9024 18.7079 14.293 18.3174C14.6835 17.9269 14.6835 17.2937 14.293 16.9032L10.1073 12.7175C9.71678 12.327 9.71678 11.6939 10.1073 11.3033L14.2893 7.12129C14.6799 6.73077 14.6799 6.0976 14.2893 5.70708Z" fill="#666666ad"></path> </g></svg>
+                    </i>
+                    
+                    <ul class="galeria">
+                        <li class="card_produto">
+                            <div class="conteudo_card">
+                                <div class="imagem_produto">
+                                    <img src="./img/produtos/arame.jpg" alt="">
+                                </div>
+                                <div class="desc_produto">
+                                    <div class="titulo_produto">
+                                        1.000 Metros de Arame Liso Ovalado 700Kgf Pg 14 x 16 Vonder
+                                    </div>
+                                    <div class="preco1">
+                                        <div class="preco_desconto">R$438,00</div>
+                                        <span>à vista no <span class="bold">Pix</span></span>
+                                    </div>
+                                    <div class="preco2">
+                                        <span>Ou <span class="preco_normal bold">R$462,00</span> em até 9X de R$51,33</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="card_produto">
+                            <div class="conteudo_card">
+                                <div class="imagem_produto">
+                                    <img src="./img/produtos/auxiliar.jpg" alt="">
+                                </div>
+                                <div class="desc_produto">
+                                    <div class="titulo_produto">
+                                        Auxiliar De Partida Portátil Apv13000 6847013000 Vonder
+                                    </div>
+                                    <div class="preco1">
+                                        <div class="preco_desconto">R$728,02</div>
+                                        <span>à vista no <span class="bold">Pix</span></span>
+                                    </div>
+                                    <div class="preco2">
+                                        <span>Ou <span class="preco_normal bold">R$766,34</span> em até 10X de R$76,63</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="card_produto">
+                            <div class="conteudo_card">
+                                <div class="imagem_produto">
+                                    <img src="./img/produtos/tomada.jpg" alt="">
+                                </div>
+                                <div class="desc_produto">
+                                    <div class="titulo_produto">
+                                        Tomada 2P+T Junção Fêmea 20A 250 1728 Fame
+                                    </div>
+                                    <div class="preco1">
+                                        <div class="preco_desconto">R$10,53</div>
+                                        <span>à vista no <span class="bold">Pix</span></span>
+                                    </div>
+                                    <div class="preco2">
+                                        <span>Ou <span class="preco_normal bold">R$11,08</span> em até 1X de R$11,08</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="card_produto">
+                            <div class="conteudo_card">
+                                <div class="imagem_produto">
+                                    <img src="./img/produtos/tubo_revestimento.jpg" alt="">
+                                </div>
+                                <div class="desc_produto">
+                                    <div class="titulo_produto">
+                                        Tubo Revestimento Para Poços Leve Plus Emar
+                                    </div>
+                                    <div class="preco1">
+                                        <div class="preco_desconto">R$116,17</div>
+                                        <span>à vista no <span class="bold">Pix</span></span>
+                                    </div>
+                                    <div class="preco2">
+                                        <span>Ou <span class="preco_normal bold">R$122,28</span> em até 2X de R$61,14</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="card_produto">
+                            <div class="conteudo_card">
+                                <div class="imagem_produto">
+                                    <img src="./img/produtos/gerador_de_energia.jpg" alt="">
+                                </div>
+        
+                                <div class="desc_produto">
+                                    <div class="titulo_produto">
+                                        Gerador De Energia Monofásico A Diesel 10KVA TDWG12000CXE-N Toyama
+                                    </div>
+                                    <div class="preco1">
+                                        <div class="preco_desconto">R$26.312,09</div>
+                                        <span>à vista no <span class="bold">Pix</span></span>
+                                    </div>
+                                    <div class="preco2">
+                                        <span>Ou <span class="preco_normal bold">R$26.312,09</span> em até 10X de R$2.631,21</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="card_produto">
+                            <div class="frete1">
+                                                            <svg style="margin-right: 4px;" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="https://www.w3.org/2000/svg">
+                                    <path d="M1.89534 9.00033L1.39534 8.00033H4.89534L4.49534 7.00033H1.22868L0.728678 6.00033H5.92868L5.52868 5.00033H0.635345L0.0620117 4.00033H2.56201C2.56201 3.6467 2.70249 3.30756 2.95254 3.05752C3.20258 2.80747 3.54172 2.66699 3.89534 2.66699H11.8953V5.33366H13.8953L15.8953 8.00033V11.3337H14.562C14.562 11.8641 14.3513 12.3728 13.9762 12.7479C13.6012 13.1229 13.0924 13.3337 12.562 13.3337C12.0316 13.3337 11.5229 13.1229 11.1478 12.7479C10.7727 12.3728 10.562 11.8641 10.562 11.3337H7.89534C7.89534 11.8641 7.68463 12.3728 7.30956 12.7479C6.93449 13.1229 6.42578 13.3337 5.89534 13.3337C5.36491 13.3337 4.8562 13.1229 4.48113 12.7479C4.10606 12.3728 3.89534 11.8641 3.89534 11.3337H2.56201V9.00033H1.89534ZM12.562 12.3337C12.8272 12.3337 13.0816 12.2283 13.2691 12.0408C13.4567 11.8532 13.562 11.5989 13.562 11.3337C13.562 11.0684 13.4567 10.8141 13.2691 10.6266C13.0816 10.439 12.8272 10.3337 12.562 10.3337C12.2968 10.3337 12.0424 10.439 11.8549 10.6266C11.6674 10.8141 11.562 11.0684 11.562 11.3337C11.562 11.5989 11.6674 11.8532 11.8549 12.0408C12.0424 12.2283 12.2968 12.3337 12.562 12.3337ZM13.562 6.33366H11.8953V8.00033H14.8687L13.562 6.33366ZM5.89534 12.3337C6.16056 12.3337 6.41492 12.2283 6.60245 12.0408C6.78999 11.8532 6.89534 11.5989 6.89534 11.3337C6.89534 11.0684 6.78999 10.8141 6.60245 10.6266C6.41492 10.439 6.16056 10.3337 5.89534 10.3337C5.63013 10.3337 5.37577 10.439 5.18824 10.6266C5.0007 10.8141 4.89534 11.0684 4.89534 11.3337C4.89534 11.5989 5.0007 11.8532 5.18824 12.0408C5.37577 12.2283 5.63013 12.3337 5.89534 12.3337Z" fill="#fff"></path>
+                                </svg>
+                                <p>FRETE GRÁTIS TODO O BRASIL</p>
+                            </div>
+                            <div class="conteudo_card">
+                                <div class="imagem_produto">
+                                    <img src="./img/produtos/aqui_o_seu_12_.jpg" alt="">
+                                </div>
+                                <div class="desc_produto">
+                                    <div class="titulo_produto">
+                                        Cloro Multiação Balde 10Kg Hidroazul
+                                    </div>
+                                    <div class="preco1">
+                                        <div class="preco_desconto">R$199,41</div>
+                                        <span>à vista no <span class="bold">Pix</span></span>
+                                    </div>
+                                    <div class="preco2">
+                                        <span>Ou <span class="preco_normal bold">R$209,91</span> em até 4X de R$52,48</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="card_produto">
+                            <div class="conteudo_card">
+                                <div class="imagem_produto">
+                                    <img src="./img/produtos/multimetro.jpg" alt="">
+                                </div>
+                                <div class="desc_produto">
+                                    <div class="titulo_produto">
+                                        Multímetro Digital ET-1100A Minipa
+                                    </div>
+                                    <div class="preco1">
+                                        <div class="preco_desconto">R$137,50</div>
+                                        <span>à vista no <span class="bold">Pix</span></span>
+                                    </div>
+                                    <div class="preco2">
+                                        <span>Ou <span class="preco_normal bold">R$144,74</span> em até 2X de R$72,37</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="card_produto">
+                            <div class="conteudo_card">
+                                <div class="imagem_produto">
+                                    <img src="./img/produtos/parafusadeira_furadeira_a_bateria_bosch_gsr_1000_smart_12v_10_bits_e_maleta.jpg" alt="">
+                                </div>
+                                <div class="desc_produto">
+                                    <div class="titulo_produto">
+                                        Parafusadeira Furadeira a bateria Bosch GSR 1000 Smart 12V 10 bits e maleta
+                                    </div>
+                                    <div class="preco1">
+                                        <div class="preco_desconto">R$474,91</div>
+                                        <span>à vista no <span class="bold">Pix</span></span>
+                                    </div>
+                                    <div class="preco2">
+                                        <span>Ou <span class="preco_normal bold">R$499,90</span> em até 9X de R$55,54</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+    
+                    <i id="right">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M9.71069 18.2929C10.1012 18.6834 10.7344 18.6834 11.1249 18.2929L16.0123 13.4006C16.7927 12.6195 16.7924 11.3537 16.0117 10.5729L11.1213 5.68254C10.7308 5.29202 10.0976 5.29202 9.70708 5.68254C9.31655 6.07307 9.31655 6.70623 9.70708 7.09676L13.8927 11.2824C14.2833 11.6729 14.2833 12.3061 13.8927 12.6966L9.71069 16.8787C9.32016 17.2692 9.32016 17.9023 9.71069 18.2929Z" fill="#666666ad"></path> </g></svg>
+                    </i>
+    
+                </div>
+                
+            </section>
+            <!-- Fim Mais Vistos -->
+    
+    
+    
+            <!-- Marcas -->
+            <section class="sessao-marcas page-size page-container">
+                <h1>Compre por marca</h1>
+                <div class="galeria_de_produtos" id="galeria_marcas">
+                    <i id="left">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M14.2893 5.70708C13.8988 5.31655 13.2657 5.31655 12.8751 5.70708L7.98768 10.5993C7.20729 11.3805 7.2076 12.6463 7.98837 13.427L12.8787 18.3174C13.2693 18.7079 13.9024 18.7079 14.293 18.3174C14.6835 17.9269 14.6835 17.2937 14.293 16.9032L10.1073 12.7175C9.71678 12.327 9.71678 11.6939 10.1073 11.3033L14.2893 7.12129C14.6799 6.73077 14.6799 6.0976 14.2893 5.70708Z" fill="#808080"></path> </g></svg>
+                    </i>
+                    <ul class="galeria">
+                        <li class="card_produto">
+                            <img src="./img/marcas/belzer.webp" alt="Belzer">
+                        </li>
+                        <li class="card_produto">
+                            <img src="./img/marcas/bosch.webp" alt="Bosch">
+                        </li>
+                        <li class="card_produto">
+                            <img src="./img/marcas/boxer.webp" alt="Boxer">
+                        </li>
+                        <li class="card_produto">
+                            <img src="./img/marcas/dremel.webp" alt="Dremel">
+                        </li>
+                        <li class="card_produto">
+                            <img src="./img/marcas/ferrari.webp" alt="Ferrari">
+                        </li>
+                        <li class="card_produto">
+                            <img src="./img/marcas/marluvas.webp" alt="Marluvas">
+                        </li>
+                        <li class="card_produto">
+                            <img src="./img/marcas/rain_bird.webp" alt="Rain Bird">
+                        </li>
+                        <li class="card_produto">
+                            <img src="./img/marcas/skil.webp" alt="Skil">
+                        </li>
+                        <li class="card_produto">
+                            <img src="./img/marcas/thebe.webp" alt="Thebe">
+                        </li>
+                        <li class="card_produto">
+                            <img src="./img/marcas/toyama.webp" alt="Toyama">
+                        </li>
+                        <li class="card_produto">
+                            <img src="./img/marcas/trapp.webp" alt="trapp">
+                        </li>
+                    </ul>
+                    <i id="right">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M9.71069 18.2929C10.1012 18.6834 10.7344 18.6834 11.1249 18.2929L16.0123 13.4006C16.7927 12.6195 16.7924 11.3537 16.0117 10.5729L11.1213 5.68254C10.7308 5.29202 10.0976 5.29202 9.70708 5.68254C9.31655 6.07307 9.31655 6.70623 9.70708 7.09676L13.8927 11.2824C14.2833 11.6729 14.2833 12.3061 13.8927 12.6966L9.71069 16.8787C9.32016 17.2692 9.32016 17.9023 9.71069 18.2929Z" fill="#808080"></path> </g></svg>
+                    </i>
+                </div>
+            </section>
+            <!-- Fim Marcas -->
+    
+    
+    
+            <!-- Recomendamos para você -->
+            <section class="sessao-produtos page-container page-size">
+    
+                <h1>Recomendamos para você</h1>
+    
+                <div class="galeria_de_produtos">
+    
+                    <i id="left">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M14.2893 5.70708C13.8988 5.31655 13.2657 5.31655 12.8751 5.70708L7.98768 10.5993C7.20729 11.3805 7.2076 12.6463 7.98837 13.427L12.8787 18.3174C13.2693 18.7079 13.9024 18.7079 14.293 18.3174C14.6835 17.9269 14.6835 17.2937 14.293 16.9032L10.1073 12.7175C9.71678 12.327 9.71678 11.6939 10.1073 11.3033L14.2893 7.12129C14.6799 6.73077 14.6799 6.0976 14.2893 5.70708Z" fill="#666666ad"></path> </g></svg>
+                    </i>
+                    
+                    <ul class="galeria">
+                        <li class="card_produto">
+                            <div class="conteudo_card">
+                                <div class="imagem_produto">
+                                    <img src="./img/produtos/carrinho_de_mao.jpg" alt="">
+                                </div>
+                                <div class="desc_produto">
+                                    <div class="titulo_produto">
+                                        Carrinho de Mão Extraforte Caçamba 65 Litros Metálica Reforçada Tramontina
+                                    </div>
+                                    <div class="preco1">
+                                        <div class="preco_desconto">R$252,84</div>
+                                        <span>à vista no <span class="bold">Pix</span></span>
+                                    </div>
+                                    <div class="preco2">
+                                        <span>Ou <span class="preco_normal bold">R$266,15</span> em até 5X de R$53,23</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="card_produto">
+                            <div class="conteudo_card">
+                                <div class="imagem_produto">
+                                    <img src="./img/produtos/esmerilhadeira_angular.jpg" alt="">
+                                </div>
+                                <div class="desc_produto">
+                                    <div class="titulo_produto">
+                                        Esmerilhadeira Angular 4 1/2" 700W 220V 9002 Skil
+                                    </div>
+                                    <div class="preco1">
+                                        <div class="preco_desconto">R$264,96</div>
+                                        <span>à vista no <span class="bold">Pix</span></span>
+                                    </div>
+                                    <div class="preco2">
+                                        <span>Ou <span class="preco_normal bold">R$3.378,90</span> em até 5X de R$55,78</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="card_produto">
+                            
+                            <div class="conteudo_card">
+                                <div class="imagem_produto">
+                                    <img src="./img/produtos/climatizador.jpg" alt="">
+                                </div>
+                                <div class="desc_produto">
+                                    <div class="titulo_produto">
+                                        Climatizador Atenas 60cm Coluna 120L 220V Goar
+                                    </div>
+                                    <div class="preco1">
+                                        <div class="preco_desconto">R$3.209,96</div>
+                                        <span>à vista no <span class="bold">Pix</span></span>
+                                    </div>
+                                    <div class="preco2">
+                                        <span>Ou <span class="preco_normal bold">R$3.378,90</span> em até 10X de R$337,89</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="card_produto">
+                            
+                            <div class="conteudo_card">
+                                <div class="imagem_produto">
+                                    <img src="./img/produtos/copo_termico.webp" alt="">
+                                </div>
+                                <div class="desc_produto">
+                                    <div class="titulo_produto">
+                                        Copo Térmico Inox com Abridor 600ml Branco Coleman
+                                    </div>
+                                    <div class="preco1">
+                                        <div class="preco_desconto">R$94,95</div>
+                                        <span>à vista no <span class="bold">Pix</span></span>
+                                    </div>
+                                    <div class="preco2">
+                                        <span>Ou <span class="preco_normal bold">R$99,95</span> 1X de R$99,95</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="card_produto">
+                            <div class="conteudo_card">
+                                <div class="imagem_produto">
+                                    <img src="./img/produtos/garraf_o_t_rmico_5l_maratona_preto_invicta_ferpam_3.png" alt="">
+                                </div>
+        
+                                <div class="desc_produto">
+                                    <div class="titulo_produto">
+                                        Garrafão Térmico 5L Maratona Preto Invicta
+                                    </div>
+                                    <div class="preco1">
+                                        <div class="preco_desconto">R$38,86</div>
+                                        <span>à vista no <span class="bold">Pix</span></span>
+                                    </div>
+                                    <div class="preco2">
+                                        <span>Ou <span class="preco_normal bold">R$40,90</span> em até 1X de R$40,90</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="card_produto">
+                            <div class="conteudo_card">
+                                <div class="imagem_produto">
+                                    <img src="./img/produtos/churrasqueira.jpg" alt="">
+                                </div>
+                                <div class="desc_produto">
+                                    <div class="titulo_produto">
+                                        Churrasqueira Portátil Bafo Gold Alumínio com Tampa Durafort
+                                    </div>
+                                    <div class="preco1">
+                                        <div class="preco_desconto">R$374,74</div>
+                                        <span>à vista no <span class="bold">Pix</span></span>
+                                    </div>
+                                    <div class="preco2">
+                                        <span>Ou <span class="preco_normal bold">R$394,46</span> em até 7X de R$56,35</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="card_produto">
+                            <div class="conteudo_card">
+                                <div class="imagem_produto">
+                                    <img src="./img/produtos/furadeira.jpg" alt="">
+                                </div>
+                                <div class="desc_produto">
+                                    <div class="titulo_produto">
+                                        Furadeira de Impacto Skil 6555 570W 220V acessórios e Maleta
+                                    </div>
+                                    <div class="preco1">
+                                        <div class="preco_desconto">R$374,74</div>
+                                        <span>à vista no <span class="bold">Pix</span></span>
+                                    </div>
+                                    <div class="preco2">
+                                        <span>Ou <span class="preco_normal bold">R$394,46</span> em até 7X de R$56,35</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="card_produto">
+                            <div class="conteudo_card">
+                                <div class="imagem_produto">
+                                    <img src="./img/produtos/betoneira.jpg" alt="">
+                                </div>
+                                <div class="desc_produto">
+                                    <div class="titulo_produto">
+                                        Betoneira Prime Monofásica 400 litros com Motor Menegotti
+                                    </div>
+                                    <div class="preco1">
+                                        <div class="preco_desconto">R$4.473,22</div>
+                                        <span>à vista no <span class="bold">Pix</span></span>
+                                    </div>
+                                    <div class="preco2">
+                                        <span>Ou <span class="preco_normal bold">R$4.708,65</span> em até 10X R$470,87</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+    
+                    <i id="right">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M9.71069 18.2929C10.1012 18.6834 10.7344 18.6834 11.1249 18.2929L16.0123 13.4006C16.7927 12.6195 16.7924 11.3537 16.0117 10.5729L11.1213 5.68254C10.7308 5.29202 10.0976 5.29202 9.70708 5.68254C9.31655 6.07307 9.31655 6.70623 9.70708 7.09676L13.8927 11.2824C14.2833 11.6729 14.2833 12.3061 13.8927 12.6966L9.71069 16.8787C9.32016 17.2692 9.32016 17.9023 9.71069 18.2929Z" fill="#666666ad"></path> </g></svg>
+                    </i>
+    
+                </div>
+                
+            </section>
+            <!-- Fim Recomendamos para você -->
+    
+            <!-- Baixou o preço -->
+            <section class="sessao-produtos page-container page-size">
+    
+                <h1>Baixou o preço</h1>
+    
+                <div class="galeria_de_produtos">
+    
+                    <i id="left">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M14.2893 5.70708C13.8988 5.31655 13.2657 5.31655 12.8751 5.70708L7.98768 10.5993C7.20729 11.3805 7.2076 12.6463 7.98837 13.427L12.8787 18.3174C13.2693 18.7079 13.9024 18.7079 14.293 18.3174C14.6835 17.9269 14.6835 17.2937 14.293 16.9032L10.1073 12.7175C9.71678 12.327 9.71678 11.6939 10.1073 11.3033L14.2893 7.12129C14.6799 6.73077 14.6799 6.0976 14.2893 5.70708Z" fill="#666666ad"></path> </g></svg>
+                    </i>
+                    
+                    <ul class="galeria">
+                        <li class="card_produto">
+                            <div class="conteudo_card">
+                                <div class="imagem_produto">
+                                    <img src="./img/produtos/refletor.jpg" alt="">
+                                </div>
+                                <div class="desc_produto">
+                                    <div class="titulo_produto">
+                                        Refletor TR LED 30W 6500K SLIM Preto Taschibra
+                                    </div>
+                                    <div class="preco1">
+                                        <div class="preco_desconto">R$39,81</div>
+                                        <span>à vista no <span class="bold">Pix</span></span>
+                                    </div>
+                                    <div class="preco2">
+                                        <span>Ou <span class="preco_normal bold">R$41,90</span> em até 1X de R$41,90</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="card_produto">
+                            <div class="conteudo_card">
+                                <div class="imagem_produto">
+                                    <img src="./img/produtos/arame-ovalado-liso-belgo-fortte-ferpam.jpg" alt="">
+                                </div>
+                                <div class="desc_produto">
+                                    <div class="titulo_produto">
+                                        1000 Metros de Arame Liso Ovalado 700KgF Fortte Belgo
+                                    </div>
+                                    <div class="preco1">
+                                        <div class="preco_desconto">R$533,43</div>
+                                        <span>à vista no <span class="bold">Pix</span></span>
+                                    </div>
+                                    <div class="preco2">
+                                        <span>Ou <span class="preco_normal bold">R$561,51</span> em até 10X de R$56,15</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="card_produto">
+
+                            <div class="conteudo_card">
+                                <div class="imagem_produto">
+                                    <img src="./img/produtos/microretifica.jpg" alt="">
+                                </div>
+                                <div class="desc_produto">
+                                    <div class="titulo_produto">
+                                        Microretifica Dremel 3000 10 Peças 90W 220V F0133000PC
+                                    </div>
+                                    <div class="preco1">
+                                        <div class="preco_desconto">R$265,93</div>
+                                        <span>à vista no <span class="bold">Pix</span></span>
+                                    </div>
+                                    <div class="preco2">
+                                        <span>Ou <span class="preco_normal bold">R$279,93</span> em até 5X de R$55,99</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="card_produto">
+                            
+                            <div class="conteudo_card">
+                                <div class="imagem_produto">
+                                    <img src="./img/produtos/tinta_spray_preto_fosco_alta_temperatura_400ml_mundial_prime_ferpam_principal.jpg" alt="">
+                                </div>
+                                <div class="desc_produto">
+                                    <div class="titulo_produto">
+                                        Tinta Spray Preto Fosco Alta Temperatura 400ml Mundial Prime
+                                    </div>
+                                    <div class="preco1">
+                                        <div class="preco_desconto">R$17,52</div>
+                                        <span>à vista no <span class="bold">Pix</span></span>
+                                    </div>
+                                    <div class="preco2">
+                                        <span>Ou <span class="preco_normal bold">R$18,44</span> 10X de R$18,44</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="card_produto">
+                            <div class="conteudo_card">
+                                <div class="imagem_produto">
+                                    <img src="./img/produtos/botina_nobuck_50b26_n_40_marluvas.jpg" alt="">
+                                </div>
+        
+                                <div class="desc_produto">
+                                    <div class="titulo_produto">
+                                        Botina Nobuck 50b26 N°40 Marluvas
+                                    </div>
+                                    <div class="preco1">
+                                        <div class="preco_desconto">R$169,90</div>
+                                        <span>à vista no <span class="bold">Pix</span></span>
+                                    </div>
+                                    <div class="preco2">
+                                        <span>Ou <span class="preco_normal bold">R$169,90</span> em até 3X de R$56,63</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="card_produto">
+                            <div class="conteudo_card">
+                                <div class="imagem_produto">
+                                    <img src="./img/blog/flama_221_-_3.webp" alt="">
+                                </div>
+                                <div class="desc_produto">
+                                    <div class="titulo_produto">
+                                        Inversora Flama 221- Boxer 220v 220A
+                                    </div>
+                                    <div class="preco1">
+                                        <div class="preco_desconto">R$1.300,39</div>
+                                        <span>à vista no <span class="bold">Pix</span></span>
+                                    </div>
+                                    <div class="preco2">
+                                        <span>Ou <span class="preco_normal bold">R$1.368,83</span> em até 10X de R$136,88</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="card_produto">
+                            <div class="conteudo_card">
+                                <div class="imagem_produto">
+                                    <img src="./img/produtos/compressor.jpg" alt="">
+                                </div>
+                                <div class="desc_produto">
+                                    <div class="titulo_produto">
+                                        Compressor de Ar Direto Jet Fácil Monofásico 250W Bivolt Schulz
+                                    </div>
+                                    <div class="preco1">
+                                        <div class="preco_desconto">R$759,98</div>
+                                        <span>à vista no <span class="bold">Pix</span></span>
+                                    </div>
+                                    <div class="preco2">
+                                        <span>Ou <span class="preco_normal bold">R$799,98</span> em até 10X de R$80,00</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="card_produto">
+                            <div class="conteudo_card">
+                                <div class="imagem_produto">
+                                    <img src="./img/produtos/luva_de_seguran_a_malha_4_fios_pig_preta_kalipso_ferpam-compressed.jpg" alt="">
+                                </div>
+                                <div class="desc_produto">
+                                    <div class="titulo_produto">
+                                        Luva de Segurança Malha 4 Fios Pigmentada Preta Kalipso
+                                    </div>
+                                    <div class="preco1">
+                                        <div class="preco_desconto">R$1,74</div>
+                                        <span>à vista no <span class="bold">Pix</span></span>
+                                    </div>
+                                    <div class="preco2">
+                                        <span>Ou <span class="preco_normal bold">R$1,83</span> em até 1X de R$1,83</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+    
+                    <i id="right">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M9.71069 18.2929C10.1012 18.6834 10.7344 18.6834 11.1249 18.2929L16.0123 13.4006C16.7927 12.6195 16.7924 11.3537 16.0117 10.5729L11.1213 5.68254C10.7308 5.29202 10.0976 5.29202 9.70708 5.68254C9.31655 6.07307 9.31655 6.70623 9.70708 7.09676L13.8927 11.2824C14.2833 11.6729 14.2833 12.3061 13.8927 12.6966L9.71069 16.8787C9.32016 17.2692 9.32016 17.9023 9.71069 18.2929Z" fill="#666666ad"></path> </g></svg>
+                    </i>
+    
+                </div>
+                
+            </section>
+            <!-- Fim Baixou o preço -->
+
+            <!-- Blog -->
+            <section class="sessao-blog page-container page-size">
+                <!-- <h1>Blog Ferpam</h1> -->
+                <div class="blog-card">
+                    <div class="blog-img">
+                        <img src="./img/blog/blog1.png" alt="">
+                    </div>
+                    <div class="blog-produtos">
+                        <h2>Produtos na matéria</h2>
+                        <div class="galeria_de_produtos">
+    
+                            <i id="left">
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M14.2893 5.70708C13.8988 5.31655 13.2657 5.31655 12.8751 5.70708L7.98768 10.5993C7.20729 11.3805 7.2076 12.6463 7.98837 13.427L12.8787 18.3174C13.2693 18.7079 13.9024 18.7079 14.293 18.3174C14.6835 17.9269 14.6835 17.2937 14.293 16.9032L10.1073 12.7175C9.71678 12.327 9.71678 11.6939 10.1073 11.3033L14.2893 7.12129C14.6799 6.73077 14.6799 6.0976 14.2893 5.70708Z" fill="#666666ad"></path> </g></svg>
+                            </i>
+                            
+                            <ul class="galeria">
+                                <li class="card_produto">
+                                    <div class="conteudo_card">
+                                        <div class="imagem_produto">
+                                            <img src="./img/blog/flama_221_-_3.webp" alt="">
+                                        </div>
+                                        <div class="desc_produto">
+                                            <div class="titulo_produto">
+                                                Inversora Flama 221- Boxer 220v 220A
+                                            </div>
+                                            <div class="preco1">
+                                                <div class="preco_desconto">R$1.300,39</div>
+                                                <span>à vista no <span class="bold">Pix</span></span>
+                                            </div>
+                                            <div class="preco2">
+                                                <span>Ou <span class="preco_normal bold">R$1.368,83</span> em até 10X de R$136,88</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="card_produto">
+                                    <div class="conteudo_card">
+                                        <div class="imagem_produto">
+                                            <img src="./img/blog/inversora_flama_201.webp" alt="">
+                                        </div>
+                                        <div class="desc_produto">
+                                            <div class="titulo_produto">
+                                                Inversora Flama 201 Bivolt 200A Boxer
+                                            </div>
+                                            <div class="preco1">
+                                                <div class="preco_desconto">R$1.300,39</div>
+                                                <span>à vista no <span class="bold">Pix</span></span>
+                                            </div>
+                                            <div class="preco2">
+                                                <span>Ou <span class="preco_normal bold">R$1.368,83</span> em até 10X de R$136,88</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+            
+                            <i id="right">
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M9.71069 18.2929C10.1012 18.6834 10.7344 18.6834 11.1249 18.2929L16.0123 13.4006C16.7927 12.6195 16.7924 11.3537 16.0117 10.5729L11.1213 5.68254C10.7308 5.29202 10.0976 5.29202 9.70708 5.68254C9.31655 6.07307 9.31655 6.70623 9.70708 7.09676L13.8927 11.2824C14.2833 11.6729 14.2833 12.3061 13.8927 12.6966L9.71069 16.8787C9.32016 17.2692 9.32016 17.9023 9.71069 18.2929Z" fill="#666666ad"></path> </g></svg>
+                            </i>
+            
+                        </div> 
+                    </div>
+                </div>
+            </section>
+            <!-- Fim Blog -->
+
+            <!-- Newsletter -->
+            <!--
+            <section class="sessao-newsletter page-container page-size">
+                <div class="newsletter">
+                    <img src="./img/Ferpamzinho.webp" alt="Ferpamzinho">
+                    <div class="newsletter-form">
+                        <h3>Fique por dentro das Novidades e Promoções!</h3>
+                        <p>Cadastre-se gratuitamente para receber nossa newsletter</p>
+                        <div class="inputs">
+                            <input type="email" name="email" id="email" placeholder="Seu endereço de email">
+                            <input type="submit" value="Quero receber!" id="cadastrar">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            -->
+            <!-- Fim Newsletter -->
+
+            <section>
+                <div class="opnioesverificadas">
+                    <iframe id="AV_widget_iframe" frameborder="0" width="100%" height="100%" src="https://cl.avis-verifies.com/br/cache/6/7/e/67e0f667-e02a-1124-9923-bf62d4625623/widget4/67e0f667-e02a-1124-9923-bf62d4625623horizontal_index.html"></iframe>
+                </div>
+            </section>
+
+
+            <!-- Botão Whatsapp -->
+            <div class="wpp_btn">
+                <i class="bi bi-whatsapp"></i>
+            </div>
+            <!-- Fim Botão Whatsapp -->
+
+        </div>
+        <!-- Fim da div Main Content -->
+
+
+        <!-- Menu Mobile -->
+        <nav class="mobile-menu">
+            <ul>
+                <li>
+                    <i class="bi bi-list-ul"></i>
+                    <p>Categorias</p>
+                </li>
+                <li>
+                    <i class="bi bi-person-fill"></i>
+                    <p>Minha Conta</p>
+                </li>
+                <li>
+                    <i class="bi bi-heart-fill"></i>
+                    <p>Favoritos</p>
+                </li>
+                <li>
+                    <i class="bi bi-cart-fill"></i>
+                    <p>Carrinho</p>
+                </li>
+                <li id="mobile-wpp-btn">
+                    <i class="bi bi-whatsapp"></i>
+                    <p>Whatsapp</p>
+                </li>
+            </ul>
+        </nav>
+        <!-- Fim Menu Mobile -->
+
+    </main>
+    <!-- Fim da Main -->
+
+
+    <!-- Footer -->
+    <footer class="page-container">
+        <div class="footer-content page-size">
+            <!-- <div class="row-1">
+                    <p>PREÇOS EXCLUSIVOS PARA VENDA ONLINE. NÃO SENDO VÁLIDOS PARA AS LOJAS FÍSICAS.</p>
+            </div> -->
+            <div class="row-2">
+                <div class="footer-row">
+                    <div class="footer-col">
+                        <h4 class="title">Atendimento</h4>
+                        <p>
+                            Segunda a Sexta-Feira das 07:30h às 18:00h
+                            <br>
+                            Sábado das 07:30h às 13:00h
+                        </p>
+                        <p>
+                            <i class="bi bi-telephone-fill"></i> (63) 2111-3600
+                        </p>
+                        <p>
+                            <i class="bi bi-envelope-fill"></i> Orçamento:<br>
+                            comercial@ferpam.com.br
+                        </p>
+                        <p>
+                            <i class="bi bi-envelope-fill"></i> Sac:<br>
+                            sac@ferpam.com.br
+                        </p>
+                    </div>
+                    <div class="footer-col">
+                        <h4 class="title">Institucional</h4>
+                        <ul>
+                            <li>Quem Somos</li>
+                            <li>Fale Conosco</li>
+                            <li>Política de Privacidade</li>
+                            <li>Canais</li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4 class="title">Ajuda</h4>
+                        <ul>
+                            <li>Formas de Pagamento</li>
+                            <li>Trocas e Devoluções</li>
+                            <li>Fretes e Entregas</li>
+                            <li>Download</li>
+                            <li>Dimensione sua bomba</li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4 class="title">Formas de Pagamento</h4>
+                        <div class="card-logos">
+                            <img src="./img/Cards/mastercard.jpg" alt="">
+                            <img src="./img/Cards/visa.png" alt="">
+                            <img src="./img/Cards/elo.png" alt="">
+                            <img src="./img/Cards/diners-club.png" alt="">
+                            <img src="./img/Cards/hipercard.png" alt="">
+                            <img src="./img/Cards/amex.jpg" alt="">
+                            <img src="./img/Cards/pix.png" alt="">
+                            <img src="./img/Cards/boleto.png" alt="">
+                        </div>
+                    </div>
+                    <div class="footer-col">
+                        <h4 class="title">Nossas Redes</h4>
+                        <div class="icons_siga-nos">
+                            <i class="bi bi-facebook"></i>
+                            <i class="bi bi-instagram"></i>
+                            <i class="bi bi-youtube"></i>
+                        </div>
+                    </div>
+                    <div class="footer-col">
+                        <ul>
+                            <li>
+                                <h6>Ferpam Palmas - TO</h6>
+                                <p>
+                                    (63)2111-3600<br>
+                                    Quadra 104 Sul, Rua SE 7, Conjunto 1, Lote 16A, s/n - Plano Diretor Sul, Palmas TO, 77020-022
+                                </p>
+                            </li>
+                            <li>
+                                <h6>Borrachas Confiança</h6>
+                                <p>
+                                    (63) 2111-3658<br>
+                                    104 Sul, Avenida Lo-01, Palmas - TO
+                                </p>
+                            </li>
+                            <li>
+                                <h6>Ferpam Borrachas Gurupi</h6>
+                                <p>
+                                    (63)3351-1665<br>
+                                    Av. Pará, 1919, Centro, Gurupi - TO
+                                </p>
+                            </li>
+                            <li>
+                                <h6>Ferpam Borrachas Araguaína</h6>
+                                <p>
+                                    (63)3411-8400<br>
+                                    Av. Cônego João Lima, n 263 Entrocamento
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Fim do Footer -->
+
+    <!-- Bloco da altura do menu mobile -->
+    <div class="mobile-menu-height"></div>
+    <!-- Fim do bloco da altura do menu mobile -->
+</body>
+</html>

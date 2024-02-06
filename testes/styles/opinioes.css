@@ -1,0 +1,13 @@
+.opnioesverificadas{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+@media screen and (max-width: 520px){
+    .opnioesverificadas .netreviews-widget{
+        flex-direction: column;
+    }
+    .opnioesverificadas .netreviews-widget .widget-header{
+        display: block;
+    }
+}
