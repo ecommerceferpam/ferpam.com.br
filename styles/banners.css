@@ -115,7 +115,7 @@ i.next:hover,  i.prev:hover{
         padding: 20px 20px 0px 20px;
     }
     .banner-container .banners{
-        border-radius: 8px 8px 0px 0px;
+        border-radius: 8px;
     }
     .banner-container .buttons{
         display: none;

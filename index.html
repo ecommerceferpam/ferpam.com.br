@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+
     <title>Ferpam - Novo Layout</title>
 
     <!-- Favicon -->
@@ -15,6 +16,9 @@
 
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- Barra de progresso circular -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/radialIndicator/1.4.0/radialIndicator.min.js"></script>
 
     <!-- Styles -->
     <link rel="stylesheet" href="./styles/header.css">
@@ -51,7 +55,7 @@
                 <div class="user-btn">
                     <i class="bi bi-whatsapp"></i>
                     <div class="btn-desc">
-                        <p>Nosso <br><span>Whatsapp</span></p>
+                        <p>Fale com <br><span>um Atendente</span></p>
                     </div>
                 </div>
                 <div class="user-btn">
@@ -60,7 +64,7 @@
                         <p>Entre ou <br><span>Cadastre-se</span></p>
                     </div>
                 </div>
-                <i class="bi bi-heart-fill"></i>
+                <!-- <i class="bi bi-heart-fill"></i> -->
                 <i class="bi bi-cart-fill"></i>
             </div>
         </div>
@@ -232,7 +236,7 @@
             </script>
             <!-- Fim Banners -->
 
-            <div class="vantagens-container">
+            <!-- <div class="vantagens-container">
                 <div class="page-size">
                     <div class="vantagens">
                         <div class="vantagem active">
@@ -314,184 +318,247 @@
                     }
                     indicatorsVantagens();
                 }
-            </script>
+            </script> -->
         </section>
         <div class="main-content page-size">
-    
-            <!-- <img src="./img/frete_1.jpg" alt="" class="frete-1"> -->
-    
-            <!-- Produtos sem categoria -->
-            <section class="sessao-produtos page-container page-size">
-    
-                <div class="galeria_de_produtos">
-    
-                    <i id="left">
-                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M14.2893 5.70708C13.8988 5.31655 13.2657 5.31655 12.8751 5.70708L7.98768 10.5993C7.20729 11.3805 7.2076 12.6463 7.98837 13.427L12.8787 18.3174C13.2693 18.7079 13.9024 18.7079 14.293 18.3174C14.6835 17.9269 14.6835 17.2937 14.293 16.9032L10.1073 12.7175C9.71678 12.327 9.71678 11.6939 10.1073 11.3033L14.2893 7.12129C14.6799 6.73077 14.6799 6.0976 14.2893 5.70708Z" fill="#666666ad"></path> </g></svg>
-                    </i>
-                    
-                    <ul class="galeria">
-                        <li class="card_produto">
-                            <div class="conteudo_card">
-                                <div class="desc_produto">
-                                    <div class="imagem_produto">
-                                        <img src="./img/produtos/inversora_solda.jpg" alt="">
-                                    </div>
-                                    <div class="titulo_produto">
-                                        1.000 Metros de Arame Liso Ovalado 700Kgf Pg 14 x 16 Vonder
-                                    </div>
-                                    <div class="preco1">
-                                        <div class="preco_desconto">R$989,88</div>
-                                        <span>à vista no <span class="bold">Pix</span></span>
-                                    </div>
-                                    <div class="preco2">
-                                        <span>Ou <span class="preco_normal bold">R$1.041,98</span> em até 10X de R$104,20</span>
+            
+            
+            <!-- Ofertas da Semana -->
+            <section class="sessao-produtos page-container page-size" id="ofertas_do_dia">
+                <div class="ofertas_de_hoje">
+                    <div class="row1">
+                        <h1 id="oferta-desktop">Ofertas de Hoje</h1>
+                        <h1 id="oferta-mobile">Só Hoje</h1>
+                        <div class="line"></div>
+                        <div class="countdown-container">
+                            <div class="hrs">
+                                <div id="horas" class="countdown-item"></div>
+                                <p>HRS</p>
+                            </div>
+                            <span>:</span>
+                            <div class="min">
+                                <div id="minutos" class="countdown-item"></div>
+                                <p>MIN</p>
+                            </div>
+                            <span>:</span>
+                            <div class="seg">
+                                <div id="segundos" class="countdown-item"></div>
+                                <p>SEG</p>
+                            </div>
+                        </div>
+                        <script>
+                            // Função para calcular o tempo restante até o próximo dia
+                            function calcularTempoRestante() {
+                              const agora = new Date();
+                              const amanha = new Date(agora);
+                              amanha.setDate(agora.getDate() + 1);
+                              amanha.setHours(0, 0, 0, 0);
+                        
+                              const diferenca = amanha - agora;
+                        
+                              const horas = Math.floor((diferenca % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                              const minutos = Math.floor((diferenca % (1000 * 60 * 60)) / (1000 * 60));
+                              const segundos = Math.floor((diferenca % (1000 * 60)) / 1000);
+                        
+                              return { horas, minutos, segundos };
+                            }
+                        
+                            // Função para atualizar o countdown
+                            function atualizarCountdown() {
+                              const tempoRestante = calcularTempoRestante();
+                              if(tempoRestante.horas<10){
+                                document.getElementById('horas').innerHTML = '0'+tempoRestante.horas;
+                              }else{
+                                  document.getElementById('horas').innerHTML = tempoRestante.horas;
+                              }
+                              if(tempoRestante.minutos<10){
+                                document.getElementById('minutos').innerHTML = '0'+tempoRestante.minutos;
+                              }else{
+                                document.getElementById('minutos').innerHTML = tempoRestante.minutos;
+                              }
+                              if(tempoRestante.segundos<10){
+                                document.getElementById('segundos').innerHTML = '0'+tempoRestante.segundos;
+                              }else{
+                                document.getElementById('segundos').innerHTML = tempoRestante.segundos;
+                              }
+                            }
+                        
+                            // Atualizar o countdown a cada segundo
+                            setInterval(atualizarCountdown, 1000);
+                        
+                            // Inicializar o countdown ao carregar a página
+                            atualizarCountdown();
+                        </script>
+                    </div>
+                    <div class="galeria_de_produtos">
+        
+                        <i id="left">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M14.2893 5.70708C13.8988 5.31655 13.2657 5.31655 12.8751 5.70708L7.98768 10.5993C7.20729 11.3805 7.2076 12.6463 7.98837 13.427L12.8787 18.3174C13.2693 18.7079 13.9024 18.7079 14.293 18.3174C14.6835 17.9269 14.6835 17.2937 14.293 16.9032L10.1073 12.7175C9.71678 12.327 9.71678 11.6939 10.1073 11.3033L14.2893 7.12129C14.6799 6.73077 14.6799 6.0976 14.2893 5.70708Z" fill="#666666ad"></path> </g></svg>
+                        </i>
+                        
+                        <ul class="galeria">
+                            <li class="card_produto">
+                                <div class="conteudo_card">
+                                    <div class="desc_produto">
+                                        <div class="imagem_produto">
+                                            <img src="./img/produtos/inversora_solda.jpg" alt="">
+                                        </div>
+                                        <div class="titulo_produto">
+                                            1.000 Metros de Arame Liso Ovalado 700Kgf Pg 14 x 16 Vonder
+                                        </div>
+                                        <div class="preco1">
+                                            <div class="preco_desconto">R$989,88</div>
+                                            <span>à vista no <span class="bold">Pix</span></span>
+                                        </div>
+                                        <div class="preco2">
+                                            <span>Ou <span class="preco_normal bold">R$1.041,98</span> em até 10X de R$104,20</span>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        </li>
-                        <li class="card_produto">
-                            <div class="conteudo_card">
-                                <div class="desc_produto">
-                                    <div class="imagem_produto">
-                                        <img src="./img/produtos/arame.jpg" alt="">
-                                    </div>
-                                    <div class="titulo_produto">
-                                        1.000 Metros de Arame Liso Ovalado 700Kgf Pg 14 x 16 Vonder
-                                    </div>
-                                    <div class="preco1">
-                                        <div class="preco_desconto">R$438,00</div>
-                                        <span>à vista no <span class="bold">Pix</span></span>
-                                    </div>
-                                    <div class="preco2">
-                                        <span>Ou <span class="preco_normal bold">R$462,00</span> em até 9X de R$51,33</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="card_produto">
-                            <div class="conteudo_card">
-                                <div class="desc_produto">
-                                    <div class="imagem_produto">
-                                        <img src="./img/produtos/esmerilhadeira.jpeg" alt="">
-                                    </div>
-                                    <div class="titulo_produto">
-                                        Esmerilhadeira angular Bosch GWS 9-125 S 1,7 kg 900W 220V
-                                    </div>
-                                    <div class="preco1">
-                                        <div class="preco_desconto">R$569,95</div>
-                                        <span>à vista no <span class="bold">Pix</span></span>
-                                    </div>
-                                    <div class="preco2">
-                                        <span>Ou <span class="preco_normal bold">R$599,95</span> em até 10X de R$60,00</span>
+                            </li>
+                            <li class="card_produto">
+                                <div class="conteudo_card">
+                                    <div class="desc_produto">
+                                        <div class="imagem_produto">
+                                            <img src="./img/produtos/arame.jpg" alt="">
+                                        </div>
+                                        <div class="titulo_produto">
+                                            1.000 Metros de Arame Liso Ovalado 700Kgf Pg 14 x 16 Vonder
+                                        </div>
+                                        <div class="preco1">
+                                            <div class="preco_desconto">R$438,00</div>
+                                            <span>à vista no <span class="bold">Pix</span></span>
+                                        </div>
+                                        <div class="preco2">
+                                            <span>Ou <span class="preco_normal bold">R$462,00</span> em até 9X de R$51,33</span>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        </li>
-                        <li class="card_produto">
-                            <div class="conteudo_card">
-                                <div class="desc_produto">
-                                    <div class="imagem_produto">
-                                        <img src="./img/produtos/inversora_boxer_1_.jpg" alt="">
-                                    </div>
-                                    <div class="titulo_produto">
-                                        Inversora 140A Touch 145 Boxer 220V
-                                    </div>
-                                    <div class="preco1">
-                                        <div class="preco_desconto">R$508,94</div>
-                                        <span>à vista no <span class="bold">Pix</span></span>
-                                    </div>
-                                    <div class="preco2">
-                                        <span>Ou <span class="preco_normal bold">R$535,73</span> 10X de R$53,57</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="card_produto">
-                            <div class="conteudo_card">
-                                <div class="desc_produto">
-                                    <div class="imagem_produto">
-                                        <img src="./img/produtos/furadeira.jpg" alt="">
-                                    </div>
-                                    <div class="titulo_produto">
-                                        Furadeira de Impacto Skil 6555 570W 220V acessórios e Maleta
-                                    </div>
-                                    <div class="preco1">
-                                        <div class="preco_desconto">R$374,74</div>
-                                        <span>à vista no <span class="bold">Pix</span></span>
-                                    </div>
-                                    <div class="preco2">
-                                        <span>Ou <span class="preco_normal bold">R$394,46</span> em até 7X de R$56,35</span>
+                            </li>
+                            <li class="card_produto">
+                                <div class="conteudo_card">
+                                    <div class="desc_produto">
+                                        <div class="imagem_produto">
+                                            <img src="./img/produtos/esmerilhadeira.jpeg" alt="">
+                                        </div>
+                                        <div class="titulo_produto">
+                                            Esmerilhadeira angular Bosch GWS 9-125 S 1,7 kg 900W 220V
+                                        </div>
+                                        <div class="preco1">
+                                            <div class="preco_desconto">R$569,95</div>
+                                            <span>à vista no <span class="bold">Pix</span></span>
+                                        </div>
+                                        <div class="preco2">
+                                            <span>Ou <span class="preco_normal bold">R$599,95</span> em até 10X de R$60,00</span>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        </li>
-                        <li class="card_produto">
-                            <div class="conteudo_card">
-                                <div class="desc_produto">
-                                    <div class="imagem_produto">
-                                        <img src="./img/produtos/fita_isolante.jpg" alt="">
-                                    </div>
-                                    <div class="titulo_produto">
-                                        Fita Isolante Imperial 20m 3M
-                                    </div>
-                                    <div class="preco1">
-                                        <div class="preco_desconto">R$6,66</div>
-                                        <span>à vista no <span class="bold">Pix</span></span>
-                                    </div>
-                                    <div class="preco2">
-                                        <span>Ou <span class="preco_normal bold">R$7,01</span> em até 1X de R$7,01</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="card_produto">
-                            <div class="conteudo_card">
-                                <div class="desc_produto">
-                                    <div class="imagem_produto">
-                                        <img src="./img/produtos/serra_marmore.jpg" alt="">
-                                    </div>
-                                    <div class="titulo_produto">
-                                        Serra Mármore a seco GDC 150 TITAN 1500W 220V Bosch
-                                    </div>
-                                    <div class="preco1">
-                                        <div class="preco_desconto">R$370,44</div>
-                                        <span>à vista no <span class="bold">Pix</span></span>
-                                    </div>
-                                    <div class="preco2">
-                                        <span>Ou <span class="preco_normal bold">R$389,94</span> em até 7X de R$55,71</span>
+                            </li>
+                            <li class="card_produto">
+                                <div class="conteudo_card">
+                                    <div class="desc_produto">
+                                        <div class="imagem_produto">
+                                            <img src="./img/produtos/inversora_boxer_1_.jpg" alt="">
+                                        </div>
+                                        <div class="titulo_produto">
+                                            Inversora 140A Touch 145 Boxer 220V
+                                        </div>
+                                        <div class="preco1">
+                                            <div class="preco_desconto">R$508,94</div>
+                                            <span>à vista no <span class="bold">Pix</span></span>
+                                        </div>
+                                        <div class="preco2">
+                                            <span>Ou <span class="preco_normal bold">R$535,73</span> 10X de R$53,57</span>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        </li>
-                        <li class="card_produto">
-                            <div class="conteudo_card">
-                                <div class="desc_produto">
-                                    <div class="imagem_produto">
-                                        <img src="./img/produtos/capa_de_chuva.jpg" alt="">
-                                    </div>
-                                    <div class="titulo_produto">
-                                        Capa de Chuva para Motociclista Tamanho M Pantaneiro
-                                    </div>
-                                    <div class="preco1">
-                                        <div class="preco_desconto">R$72,11</div>
-                                        <span>à vista no <span class="bold">Pix</span></span>
-                                    </div>
-                                    <div class="preco2">
-                                        <span>Ou <span class="preco_normal bold">R$75,90</span> em até 1X de R$75,90</span>
+                            </li>
+                            <li class="card_produto">
+                                <div class="conteudo_card">
+                                    <div class="desc_produto">
+                                        <div class="imagem_produto">
+                                            <img src="./img/produtos/furadeira.jpg" alt="">
+                                        </div>
+                                        <div class="titulo_produto">
+                                            Furadeira de Impacto Skil 6555 570W 220V acessórios e Maleta
+                                        </div>
+                                        <div class="preco1">
+                                            <div class="preco_desconto">R$374,74</div>
+                                            <span>à vista no <span class="bold">Pix</span></span>
+                                        </div>
+                                        <div class="preco2">
+                                            <span>Ou <span class="preco_normal bold">R$394,46</span> em até 7X de R$56,35</span>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        </li>
-                    </ul>
-    
-                    <i id="right">
-                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M9.71069 18.2929C10.1012 18.6834 10.7344 18.6834 11.1249 18.2929L16.0123 13.4006C16.7927 12.6195 16.7924 11.3537 16.0117 10.5729L11.1213 5.68254C10.7308 5.29202 10.0976 5.29202 9.70708 5.68254C9.31655 6.07307 9.31655 6.70623 9.70708 7.09676L13.8927 11.2824C14.2833 11.6729 14.2833 12.3061 13.8927 12.6966L9.71069 16.8787C9.32016 17.2692 9.32016 17.9023 9.71069 18.2929Z" fill="#666666ad"></path> </g></svg>
-                    </i>
-    
+                            </li>
+                            <li class="card_produto">
+                                <div class="conteudo_card">
+                                    <div class="desc_produto">
+                                        <div class="imagem_produto">
+                                            <img src="./img/produtos/fita_isolante.jpg" alt="">
+                                        </div>
+                                        <div class="titulo_produto">
+                                            Fita Isolante Imperial 20m 3M
+                                        </div>
+                                        <div class="preco1">
+                                            <div class="preco_desconto">R$6,66</div>
+                                            <span>à vista no <span class="bold">Pix</span></span>
+                                        </div>
+                                        <div class="preco2">
+                                            <span>Ou <span class="preco_normal bold">R$7,01</span> em até 1X de R$7,01</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="card_produto">
+                                <div class="conteudo_card">
+                                    <div class="desc_produto">
+                                        <div class="imagem_produto">
+                                            <img src="./img/produtos/serra_marmore.jpg" alt="">
+                                        </div>
+                                        <div class="titulo_produto">
+                                            Serra Mármore a seco GDC 150 TITAN 1500W 220V Bosch
+                                        </div>
+                                        <div class="preco1">
+                                            <div class="preco_desconto">R$370,44</div>
+                                            <span>à vista no <span class="bold">Pix</span></span>
+                                        </div>
+                                        <div class="preco2">
+                                            <span>Ou <span class="preco_normal bold">R$389,94</span> em até 7X de R$55,71</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="card_produto">
+                                <div class="conteudo_card">
+                                    <div class="desc_produto">
+                                        <div class="imagem_produto">
+                                            <img src="./img/produtos/capa_de_chuva.jpg" alt="">
+                                        </div>
+                                        <div class="titulo_produto">
+                                            Capa de Chuva para Motociclista Tamanho M Pantaneiro
+                                        </div>
+                                        <div class="preco1">
+                                            <div class="preco_desconto">R$72,11</div>
+                                            <span>à vista no <span class="bold">Pix</span></span>
+                                        </div>
+                                        <div class="preco2">
+                                            <span>Ou <span class="preco_normal bold">R$75,90</span> em até 1X de R$75,90</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+        
+                        <i id="right">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M9.71069 18.2929C10.1012 18.6834 10.7344 18.6834 11.1249 18.2929L16.0123 13.4006C16.7927 12.6195 16.7924 11.3537 16.0117 10.5729L11.1213 5.68254C10.7308 5.29202 10.0976 5.29202 9.70708 5.68254C9.31655 6.07307 9.31655 6.70623 9.70708 7.09676L13.8927 11.2824C14.2833 11.6729 14.2833 12.3061 13.8927 12.6966L9.71069 16.8787C9.32016 17.2692 9.32016 17.9023 9.71069 18.2929Z" fill="#666666ad"></path> </g></svg>
+                        </i>
+        
+                    </div>
                 </div>
-                
             </section>
-            <!-- Fim Produtos sem categoria -->
+            <!-- Fim Ofertas da Semana-->
     
             <!-- Mais Vendidos -->
             <section class="sessao-produtos page-container page-size">
@@ -1365,6 +1432,7 @@
             <!-- Fim Blog -->
 
             <!-- Newsletter -->
+            <!--
             <section class="sessao-newsletter page-container page-size">
                 <div class="newsletter">
                     <img src="./img/Ferpamzinho.webp" alt="Ferpamzinho">
@@ -1378,6 +1446,7 @@
                     </div>
                 </div>
             </section>
+            -->
             <!-- Fim Newsletter -->
 
             <section>
@@ -1431,17 +1500,17 @@
     <!-- Footer -->
     <footer class="page-container">
         <div class="footer-content page-size">
-            <div class="row-1">
+            <!-- <div class="row-1">
                     <p>PREÇOS EXCLUSIVOS PARA VENDA ONLINE. NÃO SENDO VÁLIDOS PARA AS LOJAS FÍSICAS.</p>
-            </div>
+            </div> -->
             <div class="row-2">
                 <div class="footer-row">
                     <div class="footer-col">
                         <h4 class="title">Atendimento</h4>
                         <p>
-                            Segunda a Sexta-Feira das 08:00h às 18:00h
+                            Segunda a Sexta-Feira das 07:30h às 18:00h
                             <br>
-                            Sábado das 08:00h às 12:00h
+                            Sábado das 07:30h às 13:00h
                         </p>
                         <p>
                             <i class="bi bi-telephone-fill"></i> (63) 2111-3600
