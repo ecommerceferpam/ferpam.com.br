@@ -159,29 +159,29 @@ header{
     #desktop-search{
         display: none;
     }
-    .mobile_header{
+    /* .mobile_header{
         display: flex;
-    }
-    .mobile_header .logo{
+    } */
+    /* .mobile_header .logo{
         display: block;
         height: 35px;
-    }
+    } */
     #mobile-search{
         display: block;
     }
-    .logo{
+    /* .logo{
         display: none;
-    }
+    } */
     .faixa-topo{
         display: none;
     }
     .header-content{
         padding: 12px 20px;
-        flex-direction: column;
+        /* flex-direction: column; */
         gap: 10px;
     }
     .barra-de-pesquisa{
-        height: 40px;
+        /* height: 40px; */
         font-size: 14px;
         width: 100%;
     }
@@ -193,6 +193,9 @@ header{
     .header-content{
         padding: 10px 20px;
     }
+    .logo{
+        height: 35px;
+    } 
     .barra-de-pesquisa{
         height: 35px;
         font-size: 13px;
