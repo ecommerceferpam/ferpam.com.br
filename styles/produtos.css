@@ -301,7 +301,7 @@
         color: #fff;
     }
     .countdown-container p{
-        display: none;
+        /* display: none; */
     }
 
 }

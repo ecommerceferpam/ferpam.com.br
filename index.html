@@ -1564,38 +1564,74 @@
                             <i class="bi bi-youtube"></i>
                         </div>
                     </div>
+                    
                     <div class="footer-col">
                         <ul>
-                            <li>
+                            <li onclick="mostrarMapa(-10.189093401855862, -48.32769831317623, 'ferpam-palmas')" id='ferpam-palmas'>
                                 <h6>Ferpam Palmas - TO</h6>
                                 <p>
                                     (63)2111-3600<br>
                                     Quadra 104 Sul, Rua SE 7, Conjunto 1, Lote 16A, s/n - Plano Diretor Sul, Palmas TO, 77020-022
                                 </p>
+                                <a class="maps-btn" href="http://maps.app.goo.gl/9UeXrDkR2teqAhnC9" target="_blank" rel="noopener noreferrer">
+                                    <button>Ver no Maps <i class="bi bi-box-arrow-up-right"></i></button>
+                                </a>
                             </li>
-                            <li>
+                            <li onclick="mostrarMapa(-10.189093401855862, -48.32769831317623, 'borrachas-palmas')" id="borrachas-palmas">
                                 <h6>Borrachas Confiança</h6>
                                 <p>
                                     (63) 2111-3658<br>
                                     104 Sul, Avenida Lo-01, Palmas - TO
                                 </p>
+                                <a class="maps-btn" href="http://maps.app.goo.gl/9UeXrDkR2teqAhnC9" target="_blank" rel="noopener noreferrer">
+                                    <button>Ver no Maps <i class="bi bi-box-arrow-up-right"></i></button>
+                                </a>
                             </li>
-                            <li>
+                            <li onclick="mostrarMapa(-11.731786935707708, -49.07275769101503, 'ferpam-gurupi')" id="ferpam-gurupi">
                                 <h6>Ferpam Borrachas Gurupi</h6>
                                 <p>
                                     (63)3351-1665<br>
                                     Av. Pará, 1919, Centro, Gurupi - TO
                                 </p>
+                                <a class="maps-btn" href="http://maps.app.goo.gl/f6DD53d7Z8DN8JTAA" target="_blank" rel="noopener noreferrer">
+                                    <button>Ver no Maps <i class="bi bi-box-arrow-up-right"></i></button>
+                                </a>
                             </li>
-                            <li>
+                            <li onclick="mostrarMapa(-7.180860732307948, -48.2207346762984, 'ferpam-araguaina')" id="ferpam-araguaina">
                                 <h6>Ferpam Borrachas Araguaína</h6>
                                 <p>
                                     (63)3411-8400<br>
                                     Av. Cônego João Lima, n 263 Entrocamento
                                 </p>
+                                <a class="maps-btn" href="http://maps.app.goo.gl/nQ7s9BVje8ZtL6RQA" target="_blank" rel="noopener noreferrer">
+                                    <button>Ver no Maps <i class="bi bi-box-arrow-up-right"></i></button>
+                                </a>
                             </li>
                         </ul>
+
+                        <div id="mapa-container" class="map-container"></div>
+                        
+                        <script>
+                            // Chama a função diretamente no início
+                            mostrarMapa(-10.189093401855862, -48.32769831317623, 'ferpam-palmas','maps.app.goo.gl/9UeXrDkR2teqAhnC9');
+
+                            function mostrarMapa(latitude, longitude, liId) {
+                                var mapaContainer = document.getElementById('mapa-container');
+                                mapaContainer.innerHTML = `<iframe style="width:100%" src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d583.7362484252683!2d${longitude}!3d${latitude}!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sferpam%20palmas!5e0!3m2!1spt-BR!2sbr!4v1707763172831!5m2!1spt-BR!2sbr" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>`;
+
+                                // Remover a classe 'selected-li' de todas as li's
+                                var allLiElements = document.querySelectorAll('.footer-col ul li');
+                                allLiElements.forEach(function(li) {
+                                    li.classList.remove('selected-li');
+                                });
+
+                                // Adicionar a classe 'selected-li' à li selecionada
+                                var selectedLi = document.getElementById(liId);
+                                selectedLi.classList.add('selected-li');
+                            }
+                        </script>
                     </div>
+                    
                 </div>
             </div>
         </div>
