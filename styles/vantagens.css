@@ -17,6 +17,7 @@
     position: relative;
     overflow: hidden;
     background-color: #161a36;
+    padding: 0;
 }
 .vantagens-container .page-size .vantagem{
     width: 100%;
@@ -42,6 +43,7 @@
     color: #fff;
 }
 
+
 @media screen and (max-width: 900px){
     .vantagens-container{
         height: 25px;
@@ -49,7 +51,7 @@
     }
     .vantagens-container .page-size{
         margin: 0px 20px;
-        border-radius: 0px 0px 8px 8px;
+        /* border-radius: 0px 0px 8px 8px; */
     }
     .vantagens-container .page-size .vantagem{
         font-size: 10px;

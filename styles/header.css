@@ -4,12 +4,24 @@
     align-items: center;
     justify-content: center;
     padding: 5px;
-    background-color: #161a36;
+    background-color: #0e1020;
+    /* background-color: #161a36; */
     color: #fff;
     /* font-size: 14px; */
     font-size: 11px;
-    font-style: italic;
+    /* font-style: italic; */
     letter-spacing: 1px;
+}
+.faixa-topo ul{
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 20px;
+}
+.faixa-topo#vendas-corporativas{
+    background-color: #191e47;
+    /* background-color: #1d224b; */
 }
 .faixa-topo #br{
     color: #00c224;
@@ -22,6 +34,41 @@
 }
 .faixa-topo a{
     color: #ffffff;
+}
+.faixa-topo#logo-mobile{
+    display: none;
+    padding: 10px 20px;
+    justify-content: center;
+    gap: 10px;
+}
+.faixa-topo#logo-mobile .line{
+    flex-grow: 1;
+    border: solid 1px #ffffff2c;
+}
+.faixa-topo#logo-mobile .logo{
+    height: 30px;
+}
+.faixa-topo#logo-mobile ul{
+    justify-content: flex-end;
+    gap: 10px;
+    padding: 0px 0px;
+}
+.faixa-topo#logo-mobile ul li{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.faixa-topo#logo-mobile ul li i{
+    font-size: 20px;
+    line-height: 20px;
+}
+.faixa-topo#vantagens{
+    font-weight: bold;
+    font-style: normal;
+    font-size: 15px;
+}
+.faixa-topo#vantagens span{
+    color: #34df34;
 }
 
 
@@ -36,7 +83,7 @@ header{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 30px;
+    gap: 20px;
     padding: 15px 20px;
 }
 .logo{
@@ -109,6 +156,7 @@ header{
     display: flex;
     font-weight: bold;
     gap: 8px;
+    align-items: center;
 }
 .sub-header-content ul{
     flex-grow: 1;
@@ -122,6 +170,11 @@ header{
 
 @media screen and (max-width: 1145px) {
     .sub-header .sub-header-content #epi{
+        display: none;
+    }
+}
+@media screen and (max-width: 1090px) {
+    #vendas-corporativas #frete-gratis{
         display: none;
     }
     
@@ -147,7 +200,7 @@ header{
     }
     
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 450px) {
     #desktop-search{
         display: none;
     }
@@ -169,6 +222,13 @@ header{
     }
     .barra-de-pesquisa .icones i{
         font-size: 19px;
+    }
+    .faixa-topo#logo-mobile{
+        display: flex;
+        text-align: center;
+    }
+    .faixa-topo#logo-mobile .logo{
+        display: block;
     }
 }
 @media screen and (max-width: 350px) {
