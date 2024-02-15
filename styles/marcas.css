@@ -8,7 +8,7 @@
     position: relative;
 }
 
-#galeria_marcas i{
+/* #galeria_marcas i{
     height: 40px;
     width: 40px;
     background-color: rgba(255, 255, 255, 0);
@@ -19,7 +19,7 @@
 }
 #galeria_marcas i:last-child{
     right: -6px;
-}
+} */
 
 #galeria_marcas .galeria{
     display: grid;

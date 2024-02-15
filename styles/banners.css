@@ -110,17 +110,27 @@ i.next:hover,  i.prev:hover{
 }
 
 
+.banner-meio img{
+    width: 100%;
+    border-radius: 5px;
+    min-height: 100px;
+    object-fit: cover;
+}
+
+
+
 @media screen and (max-width: 900px) {
     .banner-container{
         padding: 20px 20px 0px 20px;
     }
     .banner-container .banners{
-        border-radius: 8px;
+        border-radius: 8px 0px 8px 0px;
     }
     .banner-container .buttons{
         display: none;
     }
 }
+
 @media screen and (max-width: 350px) {
     .banner-container{
         min-height: 130px;
