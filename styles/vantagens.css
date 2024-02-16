@@ -6,7 +6,8 @@
     display: flex;
     justify-content: center;
     /* padding: 5px 20px; */
-    background-color: #0e1020;
+    /* background-color: #0e1020; */
+    background-color: #252525;
     /* background-color: #293065; */
     max-width: 1920px;
 }
@@ -17,7 +18,8 @@
     height: 100%;
     position: relative;
     overflow: hidden;
-    background-color: #0e1020;
+    /* background-color: #0e1020; */
+    background-color: #252525;
     /* background-color: #293065; */
     padding: 0;
 }

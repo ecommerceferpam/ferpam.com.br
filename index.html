@@ -13,6 +13,8 @@
     <!-- Scripts -->
     <script src="./scripts/produtos.js" defer></script>
     <script src="./scripts/marcas.js" defer></script>
+    <script src="./scripts/banners.js" defer></script>
+    <script src="./scripts/regua-fio.js" defer></script>
 
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
@@ -37,19 +39,9 @@
 <body>
     <!-- Header -->
     <div class="faixa-topo" id="logo-mobile">
-        <!-- <p>FRETE GRÁTIS PARA TODO O <span id="br">BR</span><span id="as">AS</span><span id="il">IL</span>! - <a href="">Veja as Regras</a></p> -->
         <div class="line"></div>
         <img src="./img/logoresize.png" alt="FERPAM" class="logo">
         <div class="line"></div>
-        <!-- <ul>
-            <li>
-                <i class="bi bi-person-fill"></i>
-            </li>
-            <li>
-                <i class="bi bi-cart-fill"></i>
-            </li>
-        </ul> -->
-
     </div>
     <div class="faixa-topo" id="vantagens">
         <!-- <p>FRETE GRÁTIS PARA TODO O <span id="br">BR</span><span id="as">AS</span><span id="il">IL</span>! - <a href="">Veja as Regras</a></p> -->
@@ -131,29 +123,6 @@
                     <img src="./img/2.png" alt="" class="banner" id="banner-2">
                     <img src="./img/3.png" alt="" class="banner" id="banner-3">
                 </div>
-                <script>
-                    // Função para verificar a largura da tela e alterar a URL da imagem, se necessário
-                    function verificarLarguraDaTela() {
-                      var larguraDaTela = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-                  
-                      // Verifica se a largura da tela é menor que 900 pixels
-                      if (larguraDaTela < 650) {
-                        // Altera a URL da imagem para uma versão menor
-                        document.getElementById('banner-1').src = './img/1-mobile.png';
-                        document.getElementById('banner-2').src = './img/2-mobile.png';
-                        document.getElementById('banner-3').src = './img/3-mobile.png';
-                      } else {
-                        // Se a tela for maior ou igual a 900 pixels, volta para a imagem original
-                        document.getElementById('banner-1').src = './img/1.png';
-                        document.getElementById('banner-2').src = './img/2.png';
-                        document.getElementById('banner-3').src = './img/3.png';
-                      }
-                    }
-                  
-                    // Adiciona um ouvinte de evento para chamar a função ao carregar a página e redimensionar a tela
-                    window.addEventListener('load', verificarLarguraDaTela);
-                    window.addEventListener('resize', verificarLarguraDaTela);
-                  </script>
 
                 <div class="buttons">
                     <i class="next">
@@ -171,117 +140,12 @@
                 </div>
 
             </div>
-            <script type="text/javascript">
-                // Access the Images
-                let slideImages = document.querySelectorAll('.banner    ');
-                // Access the next and prev buttons
-                let next = document.querySelector('.next');
-                let prev = document.querySelector('.prev');
-                // Access the indicators
-                let dots = document.querySelectorAll('.dot');
-
-                var counter = 0;
-
-                // Code for next button
-                next.addEventListener('click', slideNext);
-                function slideNext(){
-                slideImages[counter].style.animation = 'next1 0.5s ease-in forwards';
-                if(counter >= slideImages.length-1){
-                    counter = 0;
-                }
-                else{
-                    counter++;
-                }
-                clearInterval(deletInterval);
-                autoSliding();
-
-                slideImages[counter].style.animation = 'next2 0.5s ease-in forwards';
-                indicators();
-                }
-
-                // Code for prev button
-                prev.addEventListener('click', slidePrev);
-                function slidePrev(){
-                slideImages[counter].style.animation = 'prev1 0.5s ease-in forwards';
-                if(counter == 0){
-                    counter = slideImages.length-1;
-                }
-                else{
-                    counter--;
-                }
-                clearInterval(deletInterval);
-                autoSliding();
-
-                slideImages[counter].style.animation = 'prev2 0.5s ease-in forwards';
-                indicators();
-                }
-
-                // Auto slideing
-                function autoSliding(){
-                    deletInterval = setInterval(timer, 4000);
-                    function timer(){
-                        slideNext();
-                        indicators();
-                    }
-                }
-                autoSliding();
-
-                // Stop auto sliding when mouse is over
-                const container = document.querySelector('.banner-container');
-                container.addEventListener('mouseover', function(){
-                    clearInterval(deletInterval);
-                });
-
-                // Resume sliding when mouse is out
-                container.addEventListener('mouseout', autoSliding);
-
-                // Add and remove active class from the indicators
-                function indicators(){
-                    for(i = 0; i < dots.length; i++){
-                        dots[i].className = dots[i].className.replace(' active', '');
-                    }
-                    dots[counter].className += ' active';
-                }
-
-                // Add click event to the indicator
-                function switchImage(currentImage){
-                    currentImage.classList.add('active');
-                    var imageId = currentImage.getAttribute('attr');
-                    if(imageId > counter){
-                    slideImages[counter].style.animation = 'next1 0.5s ease-in forwards';
-                    counter = imageId;
-                    slideImages[counter].style.animation = 'next2 0.5s ease-in forwards';
-                    }
-                    else if(imageId == counter){
-                        return;
-                    }
-                    else{
-                    slideImages[counter].style.animation = 'prev1 0.5s ease-in forwards';
-                    counter = imageId;
-                    slideImages[counter].style.animation = 'prev2 0.5s ease-in forwards';	
-                    }
-                    indicators();
-                }
-            </script>
             <!-- Fim Banners -->
 
-            <!-- <div class="regua-fio">
-                <div class="itens-regua">
-                    <ul>
-                        <li>
-                            <i class="bi bi-credit-card-2-back"></i>
-                            <p><span>PARCELAMENTO</span><br>Em até 10x sem juros</p>
-                        </li>
-                        <li>
-                            <i class="bi bi-credit-card-2-back"></i>
-                            <p><span>PARCELAMENTO</span><br>Em até 10x sem juros</p>
-                        </li>
-                    </ul>
-                </div>
-            </div> -->
-
+            <!-- Regua-fio -->
             <div class="vantagens-container">
                 <div class="page-size">
+
                     <div class="vantagens">
                         <div class="vantagem active">
                             <i class="bi bi-patch-check"></i> GANHE 5% DE DESCONTO À VISTA
@@ -305,70 +169,11 @@
                         <div class="dotVantagem" attr='1'onclick="switchVantagem(this)"></div>
                         <div class="dotVantagem" attr='2'onclick="switchVantagem(this)"></div>
                     </div>
+
                 </div>
             </div>
-            <script type="text/javascript">
+            <!-- Fim regua-fio -->
 
-                let vantagens = document.querySelectorAll('.vantagem');
-                let dotsVantagens = document.querySelectorAll('.dotVantagem');
-                var contadorVantagens = 0;
-
-                // Code for next button
-                function slideNextVantagens(){
-                    vantagens[contadorVantagens].style.animation = 'next1 0.5s ease-in forwards';
-                    if(contadorVantagens >= vantagens.length-1){
-                        contadorVantagens = 0;
-                    }
-                    else{
-                        contadorVantagens++;
-                    }
-                    clearInterval(deletIntervalVantagens);
-                    autoSlidingVantagens();
-
-                    vantagens[contadorVantagens].style.animation = 'next2 0.5s ease-in forwards';
-                    indicatorsVantagens();
-                }
-
-
-                // Auto slideing
-                function autoSlidingVantagens(){
-                    deletIntervalVantagens = setInterval(timer, 6000);
-                    function timer(){
-                        slideNextVantagens();
-                        indicatorsVantagens();
-                    }
-                }
-                autoSlidingVantagens();
-
-                // Stop auto sliding when mouse is over
-                const containerVantagens = document.querySelector('.vantagens-container');
-                containerVantagens.addEventListener('mouseover', function(){
-                    clearInterval(deletIntervalVantagens);
-                });
-
-                // Resume sliding when mouse is out
-                containerVantagens.addEventListener('mouseout', autoSlidingVantagens);
-
-                // Add and remove active class from the indicatorsVantagens
-                function indicatorsVantagens(){
-                    for(i = 0; i < dotsVantagens.length; i++){
-                        dotsVantagens[i].className = dotsVantagens[i].className.replace(' active', '');
-                    }
-                    dotsVantagens[contadorVantagens].className += ' active';
-                }
-
-                // Add click event to the indicator
-                function switchVantagem(currentVantagem){
-                    currentVantagem.classList.add('active');
-                    var imageId = currentVantagem.getAttribute('attr');
-                    if(imageId > contadorVantagens){
-                        vantagens[contadorVantagens].style.animation = 'next1 0.5s ease-in forwards';
-                        contadorVantagens = imageId;
-                        vantagens[contadorVantagens].style.animation = 'next2 0.5s ease-in forwards';
-                    }
-                    indicatorsVantagens();
-                }
-            </script>
         </section>
         <div class="main-content page-size">
             
