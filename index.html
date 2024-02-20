@@ -1462,25 +1462,25 @@
                             </li>
                         </ul>
 
-                        <div id="mapa-container" class="map-container"></div>
+                        <!-- <div id="mapa-container" class="map-container"></div> -->
                         
                         <script>
                             // Chama a função diretamente no início
                             mostrarMapa(-10.189093401855862, -48.32769831317623, 'ferpam-palmas','maps.app.goo.gl/9UeXrDkR2teqAhnC9');
 
                             function mostrarMapa(latitude, longitude, liId) {
-                                var mapaContainer = document.getElementById('mapa-container');
-                                mapaContainer.innerHTML = `<iframe style="width:100%" src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d583.7362484252683!2d${longitude}!3d${latitude}!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sferpam%20palmas!5e0!3m2!1spt-BR!2sbr!4v1707763172831!5m2!1spt-BR!2sbr" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>`;
+                                // var mapaContainer = document.getElementById('mapa-container');
+                                // mapaContainer.innerHTML = `<iframe style="width:100%" src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d583.7362484252683!2d${longitude}!3d${latitude}!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sferpam%20palmas!5e0!3m2!1spt-BR!2sbr!4v1707763172831!5m2!1spt-BR!2sbr" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>`;
 
                                 // Remover a classe 'selected-li' de todas as li's
                                 var allLiElements = document.querySelectorAll('.footer-col ul li');
                                 allLiElements.forEach(function(li) {
-                                    li.classList.remove('selected-li');
+                                     li.classList.remove('selected-li');
                                 });
 
                                 // Adicionar a classe 'selected-li' à li selecionada
-                                var selectedLi = document.getElementById(liId);
-                                selectedLi.classList.add('selected-li');
+                                 var selectedLi = document.getElementById(liId);
+                                 selectedLi.classList.add('selected-li');
                             }
                         </script>
                     </div>

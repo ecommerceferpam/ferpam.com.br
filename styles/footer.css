@@ -77,12 +77,10 @@ footer{
 }
 
 .selected-li {
-    border-top: 1px solid rgba(255, 255, 255, 0.192);
-    border-left: 1px solid rgba(255, 255, 255, 0.192);
-    border-right: 1px solid rgba(255, 255, 255, 0.192);
     padding: 10px;
     transition: .4s;
-    border-radius: 8px 8px 0px 0px;
+    border-top: 1px solid rgba(255, 255, 255, 0.192);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.192);
 }
 
 .maps-btn{
@@ -125,12 +123,12 @@ footer{
 }
 
 @media screen and (max-width:790px){
-    .selected-li{
+    /* .selected-li{
         border:none;
         border-top: 1px solid rgba(255, 255, 255, 0.192);
         border-bottom: 1px solid rgba(255, 255, 255, 0.192);
         border-radius: 0px;
-    }
+    } */
 }
 @media screen and (max-width:800px){
     .footer-content .row-2 ul{

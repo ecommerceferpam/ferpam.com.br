@@ -40,6 +40,7 @@
     padding: 10px 20px;
     justify-content: center;
     gap: 10px;
+    background-color: #222750;
 }
 .faixa-topo#logo-mobile .line{
     flex-grow: 1;
